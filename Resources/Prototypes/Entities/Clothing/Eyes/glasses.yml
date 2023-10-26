@@ -202,3 +202,18 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
   - type: FlashImmunity
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesBlueshield
+  name: солнцезащитные очки офицера синего щита
+  description: Древняя технология, используемая для обеспечения элементарной защиты глаз. Улучшенное покрытие линз блокирует вспышки.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/bsglasses.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/bsglasses.rsi
+  - type: FlashImmunity
+  - type: ShowSecurityIcons
+  - type: EyeProtection
+    protectionTime: 5

@@ -643,3 +643,14 @@
     layers:
       - state: green
       - state: zookeeper
+
+- type: entity
+  id: SpawnPointBlueshield
+  parent: SpawnPointJobBase
+  name: офицер "Синий щит"
+  components:
+  - type: SpawnPoint
+    job_id: Blueshield
+  - type: Sprite
+    layers:
+      - state: green

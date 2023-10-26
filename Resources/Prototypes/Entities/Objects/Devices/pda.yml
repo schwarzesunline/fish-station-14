@@ -949,3 +949,15 @@
     accentVColor: "#DFDFDF"
   - type: Icon
     state: pda-seniorofficer
+
+- type: entity
+  parent: BasePDA
+  id: BlueshieldPDA
+  name: КПК офицера "Синий щит"
+  description: Почему он не синий?
+  components:
+  - type: Pda
+    id: BlueshieldIDCard
+    state: pda-bs
+  - type: Icon
+    state: pda-bs

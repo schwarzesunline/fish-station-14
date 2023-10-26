@@ -407,3 +407,33 @@
         actOnClose: false
         destroyAfterUses: 2
         destroyType: DeleteComponent
+
+- type: entity
+  id: LockerBlueshield
+  parent: LockerBaseSecure
+  name: шкаф офицера "Синий щит"
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: blueshield
+    stateDoorOpen: blueshield_open
+    stateDoorClosed: blueshield_door
+  - type: AccessReader
+    access: [ [ "Blueshield" ] ]
+
+- type: entity
+  id: LockerBlueshieldFilled
+  suffix: Filled
+  parent: LockerBlueshield
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponDisabler
+    - id: MedkitAdvancedFilled
+    - id: WeaponDisabler
+      amount: 1
+    - id: WeaponSubMachineGunDrozd
+      amount: 1
+    - id: MagazinePistolSubMachineGun
+      amount: 2
+    - id: ClothingBackpackBlueshield

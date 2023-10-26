@@ -274,3 +274,13 @@
   - type: Unremoveable
     deleteOnDrop: false
 
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlueshield
+  name: рюкзак офицера синего щита
+  description: Просторный рюкзак с множеством карманов, который носит офицер "Синий щит".
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/blueshield.rsi
+  - type: Storage
+    capacity: 110

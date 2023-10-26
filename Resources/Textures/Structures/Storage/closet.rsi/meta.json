@@ -101,6 +101,15 @@
       "name": "bomb"
     },
     {
+      "name": "blueshield"
+    },
+    {
+      "name": "blueshield_door"
+    },		
+    {
+      "name": "blueshield_open"
+    },		
+    {
       "name": "bomb_door"
     },
     {

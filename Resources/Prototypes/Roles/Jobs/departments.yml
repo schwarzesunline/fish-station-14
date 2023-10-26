@@ -37,6 +37,7 @@
   roles:
   - Captain
   - IAA # Corvax-IAA
+  - Blueshield
   - CentralCommandOfficial
   - ChiefEngineer
   - ChiefMedicalOfficer

@@ -522,3 +522,36 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
+
+- type: entity
+  name: улучшенный лазерный револьвер
+  parent: BaseWeaponBatterySmall
+  id: WeaponAdvancedRevolver
+  description: Мощный и робастный лазерный револьвер для защиты руководителей станций. Он настолько крутой, что даже самые закоренелые преступники остановятся и оценят его.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/laser_revolver.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/laser_revolver.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 100
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 40
+  - type: Appearance
+  - type: StaticPrice
+    price: 150

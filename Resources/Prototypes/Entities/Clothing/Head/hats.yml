@@ -790,3 +790,14 @@
     sprite: Clothing/Head/Hats/gladiator.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/gladiator.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretNavyBlue
+  name: темно-синий офицерский берет
+  description: Темно-синий берет, украшенный щитом — серебряным воздушным змеем с выгравированным мечом — службы безопасности Нанотрейзен, объявляющим миру, что его владелец является защитником Нанотрейзен.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beret_navyblue.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beret_navyblue.rsi
