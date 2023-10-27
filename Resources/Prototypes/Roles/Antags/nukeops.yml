@@ -6,7 +6,7 @@
   objective: roles-antag-nuclear-operative-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 18000 # 5h
+    time: 3600
 
 - type: antag
   id: NukeopsMedic
@@ -16,10 +16,10 @@
   objective: roles-antag-nuclear-operative-agent-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 18000 # 5h
+    time: 3600
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 18000 # 5h
+    time: 7200
 
 - type: antag
   id: NukeopsCommander
@@ -29,8 +29,8 @@
   objective: roles-antag-nuclear-operative-commander-objective
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 18000 # 5h
+    time: 7200
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 18000 # 5h
+    time: 3600
   # should be changed to nukie playtime when thats tracked (wyci)
