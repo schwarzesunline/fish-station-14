@@ -756,13 +756,13 @@
     job: SeniorOfficer
 
 - type: entity
-  parent: PassengerIDCard
+  parent: IDCardStandard
   id: BlueshieldIDCard
   name: ID карта офицера "Синий щит"
   components:
-  - type: PresetIdCard
-    job: Blueshield
   - type: Sprite
     layers:
     - state: default
     - state: idblueshield
+  - type: PresetIdCard
+    job: Blueshield

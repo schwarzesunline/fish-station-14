@@ -6,12 +6,12 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 72000
+      time: 7600
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 72000
+      time: 7600
     - !type:OverallPlaytimeRequirement
-      time: 180000
+      time: 18000
   startingGear: BlueshieldGear
   icon: "JobIconBlueshield"
   supervisors: job-supervisors-centcom

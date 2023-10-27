@@ -61,3 +61,6 @@ ent-SuitStoragePirateCap = { ent-SuitStorageBase }
 ent-SuitStorageWizard = { ent-SuitStorageBase }
     .suffix = Волшебник
     .desc = { ent-SuitStorageBase.desc }
+ent-SuitStorageBlueshield = { ent-SuitStorageBase }
+    .suffix = Синий щит
+    .desc = { ent-SuitStorageBase.desc }

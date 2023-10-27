@@ -48,6 +48,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Atmospherics",
         "Bar",
         "Brig",
+        "Blueshield",
         "Detective",
         "Captain",
         "Cargo",
