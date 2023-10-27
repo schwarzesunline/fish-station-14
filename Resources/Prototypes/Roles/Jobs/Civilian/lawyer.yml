@@ -5,9 +5,9 @@
   playTimeTracker: JobLawyer
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
+      time: 3600
   startingGear: LawyerGear
-  setPreference: false # Corvax-IAA
+  setPreference: true
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop
   access:
@@ -22,7 +22,7 @@
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
-    ears: ClothingHeadsetSecurity
+    ears: ClothingHeadsetService
     # TODO add copy of space law
   inhand:
     - BriefcaseBrownFilled
