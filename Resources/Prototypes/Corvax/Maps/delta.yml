@@ -20,6 +20,8 @@
           availableJobs:
             CargoTechnician: [ 4, 4 ]
             Passenger: [ -1, -1 ]
+            Blueshield: [ 1, 1 ]
+            Lawyer: [ 1, 1 ] # Corvax-IAA
             Bartender: [ 1, 1 ]
             Botanist: [ 3, 4 ]
             Chef: [ 1, 2 ]

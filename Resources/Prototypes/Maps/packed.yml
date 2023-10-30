@@ -23,8 +23,10 @@
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
+            Blueshield: [ 1, 1 ]
             Chef: [ 1, 1 ]
             Janitor: [ 1, 2 ]
+            Lawyer: [ 1, 1 ] # Corvax-IAA
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
