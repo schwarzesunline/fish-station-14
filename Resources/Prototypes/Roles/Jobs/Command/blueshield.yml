@@ -1,15 +1,15 @@
 - type: job
   id: Blueshield
-  name: офицер "Синий щит"
-  description: Cпециально обученный сотрудник NanoTrasen, высланный на станцию Центральным Командованием для защиты Капитана, Командного состава и VIP-персон с ЦК.
+  name: job-name-blueshield
+  description: job-description-blueshield
   playTimeTracker: JobBlueshield
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 7600
+      time: 10800
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 7600
+      time: 10800
     - !type:OverallPlaytimeRequirement
       time: 18000
   startingGear: BlueshieldGear
