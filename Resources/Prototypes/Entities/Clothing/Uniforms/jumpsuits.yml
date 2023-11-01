@@ -1432,7 +1432,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlueshield
-  name: униформа синего щита
+  name: униформа офицера "Синий Щит"
   description: Черная униформа с короткими рукавами в сочетании с серыми брюками-карго с цифровым камуфляжем, все из прочного материала. 
   components:
   - type: Sprite

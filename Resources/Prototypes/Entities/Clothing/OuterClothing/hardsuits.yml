@@ -852,7 +852,7 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitBlueshield
-  name: скафандр офицера синего щита
+  name: скафандр офицера "Синий Щит"
   description: Специальный скафандр, защищающий от опасной среды и низкого давления. Имеет дополнительный слой брони.
   components:
   - type: Sprite

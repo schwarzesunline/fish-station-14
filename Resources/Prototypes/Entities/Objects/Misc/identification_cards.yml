@@ -758,7 +758,7 @@
 - type: entity
   parent: IDCardStandard
   id: BlueshieldIDCard
-  name: ID карта офицера "Синий щит"
+  name: ID карта офицера "Синий Щит"
   components:
   - type: Sprite
     layers:

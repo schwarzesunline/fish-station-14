@@ -647,7 +647,7 @@
 - type: entity
   id: SpawnPointBlueshield
   parent: SpawnPointJobBase
-  name: офицер "Синий щит"
+  name: офицер "Синий Щит"
   components:
   - type: SpawnPoint
     job_id: Blueshield

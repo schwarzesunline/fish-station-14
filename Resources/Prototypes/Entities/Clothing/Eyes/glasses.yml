@@ -206,7 +206,7 @@
 - type: entity
   parent: ClothingEyesBase
   id: ClothingEyesGlassesBlueshield
-  name: солнцезащитные очки офицера синего щита
+  name: солнцезащитные очки офицера "Синий Щит"
   description: Древняя технология, используемая для обеспечения элементарной защиты глаз. Улучшенное покрытие линз блокирует вспышки.
   components:
   - type: Sprite
