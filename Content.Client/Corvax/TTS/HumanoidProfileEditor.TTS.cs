@@ -9,7 +9,7 @@ namespace Content.Client.Preferences.UI;
 
 public sealed partial class HumanoidProfileEditor
 {
-    private IRobustRandom _random = default!;
+    private TTSManager _ttsMgr = default!;
     private TTSSystem _ttsSys = default!;
     private IClientSponsorsManager? _sponsorsMgr;
     private List<TTSVoicePrototype> _voiceList = default!;
@@ -23,10 +23,7 @@ public sealed partial class HumanoidProfileEditor
 
     private void InitializeVoice()
     {
-        if (!IoCManager.Instance!.TryResolveType(out _sponsorsMgr))
-            return;
-
-        _random = IoCManager.Resolve<IRobustRandom>();
+        _ttsMgr = IoCManager.Resolve<TTSManager>();
         _ttsSys = _entMan.System<TTSSystem>();
         _voiceList = _prototypeManager
             .EnumeratePrototypes<TTSVoicePrototype>()
@@ -84,6 +81,7 @@ public sealed partial class HumanoidProfileEditor
         if (_previewDummy is null || Profile is null)
             return;
 
-        _ttsSys.RequestGlobalTTS(_random.Pick(_sampleText), Profile.Voice);
+        _ttsSys.StopAllStreams();
+        _ttsMgr.RequestTTS(_previewDummy.Value, IoCManager.Resolve<IRobustRandom>().Pick(_sampleText), Profile.Voice);
     }
 }
