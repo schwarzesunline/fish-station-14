@@ -1673,7 +1673,7 @@ namespace Content.Shared.CCVar
         /// Link to Discord server to show in the launcher.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksDiscord =
-            CVarDef.Create("infolinks.discord", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.discord", "https://discord.com/invite/ucWQRJjA6B", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to website to show in the launcher.
@@ -1691,31 +1691,31 @@ namespace Content.Shared.CCVar
         /// Link to website to show in the launcher.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksWebsite =
-            CVarDef.Create("infolinks.website", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.website", "https://www.youtube.com/@KaPaCuKuTV", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to wiki to show in the launcher.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksWiki =
-            CVarDef.Create("infolinks.wiki", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.wiki", "https://station14.ru", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to Patreon. Not shown in the launcher currently.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksPatreon =
-            CVarDef.Create("infolinks.patreon", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.patreon", "https://boosty.to/kapacukutv", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to the bug report form.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksBugReport =
-            CVarDef.Create("infolinks.bug_report", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.bug_report", "https://discord.com/channels/837289702369263676/1168571082094161993", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to site handling ban appeals. Shown in ban disconnect messages.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksAppeal =
-            CVarDef.Create("infolinks.appeal", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.appeal", "https://discord.com/channels/837289702369263676/1157634863332081765", CVar.SERVER | CVar.REPLICATED);
 
         /*
          * CONFIG

@@ -1,4 +1,4 @@
-﻿using Content.Client.Changelog;
+using Content.Client.Changelog;
 using Content.Client.UserInterface.Systems.EscapeMenu;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared.CCVar;
@@ -33,7 +33,7 @@ namespace Content.Client.Info
             AddInfoButton("server-info-discord-button", CCVars.InfoLinksDiscord);
             AddInfoButton("server-info-website-button", CCVars.InfoLinksWebsite);
             AddInfoButton("server-info-wiki-button", CCVars.InfoLinksWiki);
-            AddInfoButton("server-info-forum-button", CCVars.InfoLinksForum);
+            AddInfoButton("server-info-patreon-button", CCVars.InfoLinksPatreon);
 
             var guidebookController = UserInterfaceManager.GetUIController<GuidebookUIController>();
             var guidebookButton = new Button() { Text = Loc.GetString("server-info-guidebook-button") };
