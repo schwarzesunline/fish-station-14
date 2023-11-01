@@ -1,0 +1,1 @@
+python Tools/package_server_build.py --hybrid-acz --platform win-x64

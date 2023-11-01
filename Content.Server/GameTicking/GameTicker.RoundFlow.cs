@@ -1,4 +1,8 @@
 using System.Linq;
+using System.Net.WebSockets;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Threading;
 using Content.Server.Announcements;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
@@ -19,6 +23,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using System.Text;
 
 namespace Content.Server.GameTicking
 {
@@ -169,6 +174,13 @@ namespace Content.Server.GameTicking
             return gridUids;
         }
 
+        public static Task SendString(ClientWebSocket ws, String data, CancellationToken cancellation)
+        {
+            var encoded = Encoding.UTF8.GetBytes(data);
+            var buffer = new ArraySegment<Byte>(encoded, 0, encoded.Length);
+            return ws.SendAsync(buffer, WebSocketMessageType.Text, true, cancellation);
+        }
+
         public void StartRound(bool force = false)
         {
 #if EXCEPTION_TOLERANCE
@@ -246,6 +258,56 @@ namespace Content.Server.GameTicking
             RunLevel = GameRunLevel.InRound;
 
             _roundStartTimeSpan = _gameTiming.CurTime;
+            Console.Write("=================== Round Start ====================");
+            using var ws = new ClientWebSocket();
+            CancellationTokenSource s_cts = new CancellationTokenSource();
+            bool connectedWs = true;
+            try
+            {
+                s_cts.CancelAfter(3500);
+
+                var t = Task.Run(() => ws.ConnectAsync(new Uri("ws://localhost:12122/ws"), s_cts.Token));
+                t.Wait(s_cts.Token);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                connectedWs = false;
+            }
+            finally
+            {
+                s_cts.Dispose();
+            }
+
+            var obj = new
+            {
+                type = "start",
+                readyPlayers,
+                readyPlayerProfiles,
+                roundId = RoundId
+            };
+
+            if (connectedWs && ws.State == WebSocketState.Open)
+            {
+                s_cts = new CancellationTokenSource();
+                try
+                {
+                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions { IncludeFields = true });
+                    s_cts.CancelAfter(3500);
+
+                    var t = Task.Run(() => SendString(ws, json, s_cts.Token));
+                    t.Wait(s_cts.Token);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    s_cts.Dispose();
+                }
+            }
+
             SendStatusToAll();
             ReqWindowAttentionAll();
             UpdateLateJoinStatus();
@@ -385,6 +447,57 @@ namespace Content.Server.GameTicking
 
             // This ordering mechanism isn't great (no ordering of minds) but functions
             var listOfPlayerInfoFinal = listOfPlayerInfo.OrderBy(pi => pi.PlayerOOCName).ToArray();
+
+            using var ws = new ClientWebSocket();
+            CancellationTokenSource s_cts = new CancellationTokenSource();
+            bool connectedWs = true;
+            try
+            {
+                s_cts.CancelAfter(3500);
+
+                var t = Task.Run(() => ws.ConnectAsync(new Uri("ws://localhost:12122/ws"), s_cts.Token));
+                t.Wait(s_cts.Token);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                connectedWs = false;
+            }
+            finally
+            {
+                s_cts.Dispose();
+            }
+
+            var obj = new
+            {
+                type = "end",
+                gamemodeTitle,
+                roundDuration,
+                roundEndText,
+                roundId = RoundId,
+                playerList = listOfPlayerInfo
+            };
+
+            if (connectedWs && ws.State == WebSocketState.Open)
+            {
+                s_cts = new CancellationTokenSource();
+                try
+                {
+                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions { IncludeFields = true });
+                    s_cts.CancelAfter(3500);
+
+                    var t = Task.Run(() => SendString(ws, json, s_cts.Token));
+                    t.Wait(s_cts.Token);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    s_cts.Dispose();
+                }
+            }
 
             RaiseNetworkEvent(new RoundEndMessageEvent(gamemodeTitle, roundEndText, roundDuration, RoundId,
                 listOfPlayerInfoFinal.Length, listOfPlayerInfoFinal, LobbySong,
