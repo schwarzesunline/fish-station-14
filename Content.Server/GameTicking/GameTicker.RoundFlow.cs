@@ -24,6 +24,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Content.Server.GameTicking
 {
@@ -219,8 +220,11 @@ namespace Content.Server.GameTicking
             var readyPlayers = new List<ICommonSession>();
             var readyPlayerProfiles = new Dictionary<NetUserId, HumanoidCharacterProfile>();
 
+            var playerUserIdList = new List<string>();
+
             foreach (var (userId, status) in _playerGameStatuses)
             {
+                playerUserIdList.Add(userId.UserId.ToString());
                 if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
                 if (!_playerManager.TryGetSessionById(userId, out var session)) continue;
 #if DEBUG
@@ -282,8 +286,7 @@ namespace Content.Server.GameTicking
             var obj = new
             {
                 type = "start",
-                readyPlayers,
-                readyPlayerProfiles,
+                playerUserIdList,
                 roundId = RoundId
             };
 
@@ -292,7 +295,10 @@ namespace Content.Server.GameTicking
                 s_cts = new CancellationTokenSource();
                 try
                 {
-                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions { IncludeFields = true });
+                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions {
+                        IncludeFields = true,
+                        ReferenceHandler = ReferenceHandler.IgnoreCycles
+                    });
                     s_cts.CancelAfter(3500);
 
                     var t = Task.Run(() => SendString(ws, json, s_cts.Token));
@@ -483,7 +489,11 @@ namespace Content.Server.GameTicking
                 s_cts = new CancellationTokenSource();
                 try
                 {
-                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions { IncludeFields = true });
+                    string json = JsonSerializer.Serialize(obj, new JsonSerializerOptions
+                    {
+                        IncludeFields = true,
+                        ReferenceHandler = ReferenceHandler.IgnoreCycles
+                    });
                     s_cts.CancelAfter(3500);
 
                     var t = Task.Run(() => SendString(ws, json, s_cts.Token));
