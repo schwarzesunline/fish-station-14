@@ -239,7 +239,7 @@
   name: lawyer
   components:
   - type: SpawnPoint
-    job_id: IAA # Corvax-IAA: Lawyer replaced with IAA
+    job_id: Lawyer
   - type: Sprite
     layers:
       - state: green
@@ -647,10 +647,22 @@
 - type: entity
   id: SpawnPointBlueshield
   parent: SpawnPointJobBase
-  name: офицер "Синий щит"
+  name: офицер "Синий Щит"
   components:
   - type: SpawnPoint
     job_id: Blueshield
   - type: Sprite
     layers:
       - state: green
+
+- type: entity
+  id: SpawnPointIAA
+  parent: SpawnPointJobBase
+  name: iaa
+  components:
+  - type: SpawnPoint
+    job_id: IAA
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer

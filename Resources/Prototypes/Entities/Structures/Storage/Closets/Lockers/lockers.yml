@@ -411,7 +411,7 @@
 - type: entity
   id: LockerBlueshield
   parent: LockerBaseSecure
-  name: шкаф офицера "Синий щит"
+  name: шкаф офицера "Синий Щит"
   components:
   - type: Appearance
   - type: EntityStorageVisuals
@@ -428,7 +428,6 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponDisabler
     - id: MedkitAdvancedFilled
     - id: WeaponDisabler
       amount: 1

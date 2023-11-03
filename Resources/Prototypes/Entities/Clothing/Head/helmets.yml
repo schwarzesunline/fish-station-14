@@ -356,7 +356,7 @@
   parent: ClothingHeadHardsuitWithLightBase
   id: ClothingHeadHelmetHardsuitBlueshield
   noSpawn: true
-  name: шлем скафандра синего щита
+  name: шлем скафандра офицера "Синий Щит"
   description: Защитный шлем с новейшим совершенно секретным программным обеспечением NT-HUD. Принадлежит Синему Щиту.
   components:
   - type: Sprite

@@ -277,7 +277,7 @@
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackBlueshield
-  name: рюкзак офицера синего щита
+  name: рюкзак офицера "Синий Щит"
   description: Просторный рюкзак с множеством карманов, который носит офицер "Синий щит".
   components:
   - type: Sprite
