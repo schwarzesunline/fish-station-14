@@ -698,14 +698,14 @@ namespace Content.Shared.CCVar
         /// The amount of days before the note starts fading. It will slowly lose opacity until it reaches stale. Set to 0 to disable.
         /// </summary>
         public static readonly CVarDef<double> NoteFreshDays =
-            CVarDef.Create("admin.note_fresh_days", 91.31055, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("admin.note_fresh_days", 7.0, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
         /// The amount of days before the note completely fades, and can only be seen by admins if they press "see more notes". Set to 0
         /// if you want the note to immediately disappear without fading.
         /// </summary>
         public static readonly CVarDef<double> NoteStaleDays =
-            CVarDef.Create("admin.note_stale_days", 365.2422, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("admin.note_stale_days", 7.0, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
         /// How much time does the user have to wait in seconds before confirming that they saw an admin message?
