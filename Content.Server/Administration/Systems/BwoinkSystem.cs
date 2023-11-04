@@ -388,7 +388,7 @@ namespace Content.Server.Administration.Systems
             {
                 var systemTextNotify = Loc.GetString("bwoink-system-message-is-too-long", ("limit", BwoinkMessageLengthCap));
                 var notifyMessage = new BwoinkTextMessage(message.UserId, SystemUserId, systemTextNotify);
-                RaiseNetworkEvent(notifyMessage, senderSession.ConnectedClient, false);
+                RaiseNetworkEvent(notifyMessage, senderSession.ConnectedClient);
                 return;
             }
 
@@ -408,7 +408,7 @@ namespace Content.Server.Administration.Systems
             {
                 var systemTextNotify = Loc.GetString("bwoink-system-message-rate-limit");
                 var notifyMessage = new BwoinkTextMessage(message.UserId, SystemUserId, systemTextNotify);
-                RaiseNetworkEvent(notifyMessage, senderSession.ConnectedClient, false);
+                RaiseNetworkEvent(notifyMessage, senderSession.ConnectedClient);
                 return;
             }
 

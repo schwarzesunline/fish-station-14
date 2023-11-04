@@ -629,6 +629,18 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("DiscordRefreshToken")
+                        .HasColumnType("text")
+                        .HasColumnName("discord_refresh_token");
+
+                    b.Property<string>("DiscordSecret")
+                        .HasColumnType("text")
+                        .HasColumnName("discord_secret");
+
+                    b.Property<string>("DiscordToken")
+                        .HasColumnType("text")
+                        .HasColumnName("discord_token");
+
                     b.Property<DateTime>("FirstSeenTime")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("first_seen_time");
@@ -801,12 +813,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("species");
 
-                    // Corvax-TTS-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("voice");
-                    // Corvax-TTS-End
 
                     b.HasKey("Id")
                         .HasName("PK_profile");
