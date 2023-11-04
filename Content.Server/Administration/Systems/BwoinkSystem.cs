@@ -208,7 +208,6 @@ namespace Content.Server.Administration.Systems
 
         private async void ProcessQueue(NetUserId userId, Queue<string> messages)
         {
-            Console.WriteLine("test");
             // Whether an embed already exists for this player
             var exists = _relayMessages.TryGetValue(userId, out var existingEmbed);
 
