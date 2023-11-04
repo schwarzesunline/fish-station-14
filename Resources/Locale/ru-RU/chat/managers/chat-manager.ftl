@@ -11,6 +11,7 @@ chat-manager-crit-looc-chat-enabled-message = Игроки в критическ
 chat-manager-crit-looc-chat-disabled-message = Игроки в критическом состоянии больше не могут говорить в LOOC.
 chat-manager-admin-ooc-chat-enabled-message = Админ OOC чат был включен.
 chat-manager-admin-ooc-chat-disabled-message = Админ OOC чат был выключен.
+chat-manager-rate-limit = Не так часто! Сообщения можно отправлять только раз в секунду.
 chat-manager-max-message-length-exceeded-message = Ваше сообщение превышает лимит в { $limit } символов
 chat-manager-no-headset-on-message = У вас нет гарнитуры!
 chat-manager-no-radio-key = Не задан ключ канала!

@@ -195,6 +195,13 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!CanSendInGame(message, shell, player))
             return;
 
+        if (player != null && RateLimiter.IsBeingRateLimited(player.UserId.UserId.ToString()))
+        {
+            var systemTextNotify = Loc.GetString("chat-manager-rate-limit");
+            _chatManager.DispatchServerMessage(player, systemTextNotify);
+            return;
+        }
+
         if (player != null)
             _chatManager.SenderEntities.GetOrNew(player).Add(GetNetEntity(source));
 
@@ -257,8 +264,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null
         )
     {
+        // HERE
         if (!CanSendInGame(message, shell, player))
             return;
+
+        if (player != null && RateLimiter.IsBeingRateLimited(player.UserId.UserId.ToString()))
+        {
+            var systemTextNotify = Loc.GetString("chat-manager-rate-limit");
+            _chatManager.DispatchServerMessage(player, systemTextNotify);
+            return;
+        }
 
         // It doesn't make any sense for a non-player to send in-game OOC messages, whereas non-players may be sending
         // in-game IC messages.
@@ -681,6 +696,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (player == null)
             return true;
 
+
         var mindContainerComponent = player.ContentData()?.Mind;
 
         if (mindContainerComponent == null)
@@ -694,7 +710,6 @@ public sealed partial class ChatSystem : SharedChatSystem
             shell?.WriteError("You don't have an entity!");
             return false;
         }
-
         return !_chatManager.MessageCharacterLimit(player, message);
     }
 

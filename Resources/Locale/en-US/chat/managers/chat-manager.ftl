@@ -12,6 +12,7 @@ chat-manager-crit-looc-chat-disabled-message = Crit players can no longer use LO
 chat-manager-admin-ooc-chat-enabled-message = Admin OOC chat has been enabled.
 chat-manager-admin-ooc-chat-disabled-message = Admin OOC chat has been disabled.
 
+chat-manager-rate-limit = Not so fast! You are being rate limited.
 chat-manager-max-message-length-exceeded-message = Your message exceeded {$limit} character limit
 chat-manager-no-headset-on-message = You don't have a headset on!
 chat-manager-no-radio-key = No radio key specified!
