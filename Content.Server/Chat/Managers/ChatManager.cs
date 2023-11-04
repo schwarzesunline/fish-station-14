@@ -171,14 +171,14 @@ namespace Content.Server.Chat.Managers
             // Check if message exceeds the character limit
             if (message.Length > MaxMessageLength)
             {
-                DispatchServerMessage(player, Loc.GetString("chat-manager-max-message-length-exceeded-message", ("limit", MaxMessageLength)));
+                DispatchServerMessage(player, Loc.GetString("chat-manager-max-message-length-exceeded-message", ("limit", MaxMessageLength)), true);
                 return;
             }
 
             if (RateLimiter.IsBeingRateLimited(player.UserId.UserId.ToString()))
             {
                 var systemTextNotify = Loc.GetString("chat-manager-rate-limit");
-                DispatchServerMessage(player, systemTextNotify);
+                DispatchServerMessage(player, systemTextNotify, true);
                 return;
             }
 
@@ -354,7 +354,7 @@ namespace Content.Server.Chat.Managers
             {
                 var feedback = Loc.GetString("chat-manager-max-message-length-exceeded-message", ("limit", MaxMessageLength));
 
-                DispatchServerMessage(player, feedback);
+                DispatchServerMessage(player, feedback, true);
 
                 isOverLength = true;
             }

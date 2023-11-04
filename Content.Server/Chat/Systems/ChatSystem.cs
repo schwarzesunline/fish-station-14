@@ -198,7 +198,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (player != null && RateLimiter.IsBeingRateLimited(player.UserId.UserId.ToString()))
         {
             var systemTextNotify = Loc.GetString("chat-manager-rate-limit");
-            _chatManager.DispatchServerMessage(player, systemTextNotify);
+            _chatManager.DispatchServerMessage(player, systemTextNotify, true);
             return;
         }
 
@@ -271,7 +271,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (player != null && RateLimiter.IsBeingRateLimited(player.UserId.UserId.ToString()))
         {
             var systemTextNotify = Loc.GetString("chat-manager-rate-limit");
-            _chatManager.DispatchServerMessage(player, systemTextNotify);
+            _chatManager.DispatchServerMessage(player, systemTextNotify, true);
             return;
         }
 
