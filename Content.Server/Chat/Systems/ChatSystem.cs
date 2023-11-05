@@ -202,6 +202,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
         }
 
+        message = message.Replace("цербер", "я гей");
+        message = message.Replace("ЦЕРБЕРУ", "ПИДОРАСАМ");
+
         if (player != null)
             _chatManager.SenderEntities.GetOrNew(player).Add(GetNetEntity(source));
 

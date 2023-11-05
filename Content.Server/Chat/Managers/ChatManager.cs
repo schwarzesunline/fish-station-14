@@ -185,6 +185,7 @@ namespace Content.Server.Chat.Managers
             // I KNOW THERES LIKE 5438790 DIFFERENT POSSIBILITIES TO AVOID THIS
             // It's just an easter egg, give me a break
             message = message.Replace("цербер", "я гей");
+            message = message.Replace("ЦЕРБЕРУ", "ПИДОРАСАМ");
 
             switch (type)
             {
