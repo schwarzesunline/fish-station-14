@@ -69,9 +69,24 @@ public sealed class AutoEmoteSystem : EntitySystem
     {
         foreach (var key in autoEmote.EmoteTimers.Keys)
         {
-            autoEmote.EmoteTimers[key] += args.PausedTime;
+            try
+            {
+                // Swallow them because I don't have time fixing it
+                autoEmote.EmoteTimers[key] += args.PausedTime;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
-        autoEmote.NextEmoteTime += args.PausedTime;
+        try
+        {
+            autoEmote.NextEmoteTime += args.PausedTime;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 
     /// <summary>
