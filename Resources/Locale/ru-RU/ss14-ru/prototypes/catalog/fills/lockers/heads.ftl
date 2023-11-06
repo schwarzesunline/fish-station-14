@@ -27,6 +27,7 @@ ent-LockerResearchDirectorFilledHardsuit = { ent-LockerResearchDirector }
     .desc = { ent-LockerResearchDirector.desc }
 ent-LockerResearchDirectorFilled = { ent-LockerResearchDirector }
     .suffix = Заполненный
+	.desc = { ent-LockerResearchDirector.desc }
 ent-LockerBlueshieldFilled = { ent-LockerBlueshield }
     .suffix = Заполненный
     .desc = { ent-LockerBlueshield.desc }
