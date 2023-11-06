@@ -117,3 +117,7 @@ ghost-role-information-taxibot-name = Таксибот
 ghost-role-information-taxibot-description = Доставляйте членов экипажа в места назначения.
 ghost-role-information-Death-Squad-name = Оперативник Эскадрона смерти
 ghost-role-information-Death-Squad-description = Приготовьтесь к массированному наступлению на станцию. Ваша задача как тяжеловооружённого оперативника - уничтожить всё живое на своём пути. И никаких свидетелей.
+ghost-role-information-blob-name = Блоб
+ghost-role-information-blob-description = Вы - Блоб. Ваша задача уничтожить станцию.
+ghost-role-information-blobbernaut-name = Блоббернаут
+ghost-role-information-blobbernaut-description = Вы — Блоббернаут. Вы должны защитить ядро ​​Блоба.

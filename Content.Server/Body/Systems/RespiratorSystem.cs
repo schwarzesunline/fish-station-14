@@ -34,8 +34,24 @@ namespace Content.Server.Body.Systems
             // We want to process lung reagents before we inhale new reagents.
             UpdatesAfter.Add(typeof(MetabolizerSystem));
             SubscribeLocalEvent<RespiratorComponent, ApplyMetabolicMultiplierEvent>(OnApplyMetabolicMultiplier);
+            SubscribeLocalEvent<RespiratorImmunityComponent, ComponentInit>(OnPressureImmuneInit);
+            SubscribeLocalEvent<RespiratorImmunityComponent, ComponentRemove>(OnPressureImmuneRemove);
+        }
+        private void OnPressureImmuneInit(EntityUid uid, RespiratorImmunityComponent pressureImmunity, ComponentInit args)
+        {
+            if (TryComp<RespiratorComponent>(uid, out var respirator))
+            {
+                respirator.HasImmunity = true;
+            }
         }
 
+        private void OnPressureImmuneRemove(EntityUid uid, RespiratorImmunityComponent pressureImmunity, ComponentRemove args)
+        {
+            if (TryComp<RespiratorComponent>(uid, out var respirator))
+            {
+                respirator.HasImmunity = false;
+            }
+        }
         public override void Update(float frameTime)
         {
             base.Update(frameTime);

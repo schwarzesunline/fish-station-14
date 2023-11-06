@@ -5,6 +5,7 @@
     - Syndicate
     - Xeno
     - PetsNT
+    - Blob
     - Zombie
     - Revolutionary
 
@@ -15,6 +16,7 @@
   - Syndicate
   - Xeno
   - Zombie
+  - Blob
   - Revolutionary
 
 - type: npcFaction
@@ -31,6 +33,7 @@
   - Mouse
   - SimpleHostile
   - Zombie
+  - Blob
   - Xeno
 
 - type: npcFaction
@@ -40,6 +43,7 @@
   - Syndicate
   - Passive
   - PetsNT
+  - Blob
   - Zombie
   - Revolutionary
 
@@ -52,6 +56,7 @@
   - NanoTrasen
   - SimpleHostile
   - Xeno
+  - Blob
   - PetsNT
   - Zombie
 
@@ -62,6 +67,7 @@
   - Syndicate
   - Passive
   - PetsNT
+  - Blob
   - Zombie
   - Revolutionary
 
@@ -74,6 +80,7 @@
   - Syndicate
   - Passive
   - PetsNT
+  - Blob
   - Revolutionary
 
 - type: npcFaction
@@ -83,3 +90,15 @@
   - Zombie
   - SimpleHostile
   - Dragon
+  - Blob
+
+- type: npcFaction
+  id: Blob
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Dragon
+  - Revolutionary

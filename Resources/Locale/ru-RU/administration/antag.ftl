@@ -9,3 +9,4 @@ admin-verb-text-make-zombie = Сделать зомби
 admin-verb-text-make-nuclear-operative = Сделать ядерным оперативником
 admin-verb-text-make-pirate = Сделать пиратом
 admin-verb-text-make-head-rev = Сделать Главой революции
+admin-verb-text-make-blob = Сделать Блобом

@@ -60,6 +60,13 @@
   components:
   - type: NukeopsRule
     faction: Syndicate
+    
+- type: entity
+  id: Blob
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: BlobRule
 
 - type: entity
   id: Pirates

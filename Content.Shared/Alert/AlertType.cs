@@ -19,6 +19,8 @@ namespace Content.Shared.Alert
         Handcuffed,
         Ensnared,
         Buckled,
+        BlobResource,
+        BlobHealth,
         HumanCrit,
         HumanDead,
         HumanHealth,

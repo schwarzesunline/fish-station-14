@@ -60,6 +60,10 @@ namespace Content.Server.Body.Components
         public float CycleDelay = 2.0f;
 
         public float AccumulatedFrametime;
+
+        [ViewVariables]
+        public bool HasImmunity = false;
+
     }
 }
 

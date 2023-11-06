@@ -34,7 +34,7 @@ namespace Content.Shared.Whitelist
         /// <summary>
         ///     Tags that are allowed in the whitelist.
         /// </summary>
-        [DataField("tags", customTypeSerializer:typeof(PrototypeIdListSerializer<TagPrototype>))]
+        [DataField("tags", customTypeSerializer: typeof(PrototypeIdListSerializer<TagPrototype>))]
         public List<string>? Tags = null;
 
         /// <summary>

@@ -151,6 +151,11 @@ public sealed class SmokeSystem : EntitySystem
         {
             var coords = neighbor.Grid.GridTileToLocal(neighbor.Tile);
             var ent = Spawn(prototype.ID, coords);
+            if (TryComp<Shared.Mosley.Blob.Chemistry.BlobSmokeColorComponent>(uid, out var smokeColorComponent))
+            {
+                EnsureComp<Shared.Mosley.Blob.Chemistry.BlobSmokeColorComponent>(ent).Color =
+                    smokeColorComponent.Color;
+            }
             var spreadAmount = Math.Max(0, smokePerSpread);
             component.SpreadAmount -= args.NeighborFreeTiles.Count();
 

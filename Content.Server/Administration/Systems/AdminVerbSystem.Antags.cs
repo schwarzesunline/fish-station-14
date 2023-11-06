@@ -57,6 +57,20 @@ public sealed partial class AdminVerbSystem
         };
         args.Verbs.Add(traitor);
 
+        Verb blobAntag = new()
+        {
+            Text = Loc.GetString("admin-verb-text-make-blob"),
+            Category = VerbCategory.Antag,
+            Icon = new SpriteSpecifier.Rsi(new("/Textures/Mosley/Interface/Actions/blob.rsi"), "blobFactory"),
+            Act = () =>
+            {
+                EnsureComp<Shared.Mosley.Blob.BlobCarrierComponent>(args.Target).HasMind = targetMindComp.HasMind;
+            },
+            Impact = LogImpact.High,
+            Message = Loc.GetString("admin-verb-text-make-blob"),
+        };
+        args.Verbs.Add(blobAntag);
+
         Verb zombie = new()
         {
             Text = Loc.GetString("admin-verb-text-make-zombie"),

@@ -31,3 +31,9 @@
     - Toxin
   supportedTypes:
     - Shock
+
+- type: damageContainer
+  id: Blob
+  supportedGroups:
+    - Brute
+    - Burn
