@@ -82,3 +82,6 @@ chat-speech-verb-ghost-4 = бормочет
 chat-speech-verb-cluwne-1 = хихикает
 chat-speech-verb-cluwne-2 = хехекает
 chat-speech-verb-cluwne-3 = смеётся
+chat-manager-send-Flesh-chat-wrap-message = ПЛОТЬ: {$message}
+chat-manager-send-Flesh-chat-wrap-message-admin = {$source} (ПЛОТЬ): {$message}
+chat-manager-Flesh-channel-name = ПЛОТЬ

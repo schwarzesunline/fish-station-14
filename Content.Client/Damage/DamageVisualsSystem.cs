@@ -328,7 +328,7 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
     {
         var newLayer = spriteComponent.AddLayer(
             new SpriteSpecifier.Rsi(
-                new (sprite.Sprite), state
+                new(sprite.Sprite), state
             ), index);
         spriteComponent.LayerMapSet(mapKey, newLayer);
         if (sprite.Color != null)
@@ -345,11 +345,18 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
         // If this was passed into the component, we update
         // the data to ensure that the current disabled
         // bool matches.
-        if (AppearanceSystem.TryGetData<bool>(uid, DamageVisualizerKeys.Disabled, out var disabledStatus, args.Component))
+        if (AppearanceSystem.TryGetData<bool>(uid, DamageVisualizerKeys.Disabled, out var disabledStatus,
+                args.Component))
+        {
+            damageVisComp.Thresholds = new List<FixedPoint2>() { 0 };
+            HandleDamage(uid, args.Component, damageVisComp);
             damageVisComp.Disabled = disabledStatus;
+        }
 
         if (damageVisComp.Disabled)
+        {
             return;
+        }
 
         HandleDamage(uid, args.Component, damageVisComp);
     }
@@ -467,7 +474,7 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
             threshold = damageVisComp.Thresholds[1];
         spriteLayer = spriteComponent.AddLayer(
             new SpriteSpecifier.Rsi(
-                new (sprite.Sprite),
+                new(sprite.Sprite),
                 $"{statePrefix}_{threshold}"
             ),
             spriteLayer);
@@ -577,7 +584,7 @@ public sealed class DamageVisualsSystem : VisualizerSystem<DamageVisualsComponen
         }
         else if (damageVisComp.DamageGroup != null)
         {
-            UpdateDamageVisuals(new List<string>(){ damageVisComp.DamageGroup }, damageComponent, spriteComponent, damageVisComp);
+            UpdateDamageVisuals(new List<string>() { damageVisComp.DamageGroup }, damageComponent, spriteComponent, damageVisComp);
         }
         else if (damageVisComp.DamageOverlay != null)
         {

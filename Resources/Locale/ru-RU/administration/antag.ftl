@@ -10,3 +10,5 @@ admin-verb-text-make-nuclear-operative = Сделать ядерным опер�
 admin-verb-text-make-pirate = Сделать пиратом
 admin-verb-text-make-head-rev = Сделать Главой революции
 admin-verb-text-make-blob = Сделать Блобом
+admin-verb-text-make-flesh-leader-cultist = Сделать лидером культа плоти
+admin-verb-text-make-flesh-cultist = Сделать культистом

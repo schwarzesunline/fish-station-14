@@ -68,6 +68,10 @@ namespace Content.Server.Destructible.Thresholds
             OldTriggered = true;
             return true;
         }
+        public void AddBehavior(IThresholdBehavior behavior)
+        {
+            _behaviors.Add(behavior);
+        }
 
         /// <summary>
         ///     Triggers this threshold.

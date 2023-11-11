@@ -1,5 +1,6 @@
 using Content.Shared.Roles;
 using Content.Server.Mosley.Blob;
+using Content.Server.Mosley.Flesh;
 
 namespace Content.Server.Roles;
 
@@ -15,6 +16,7 @@ public sealed class RoleSystem : SharedRoleSystem
         SubscribeAntagEvents<NinjaRoleComponent>();
         SubscribeAntagEvents<NukeopsRoleComponent>();
         SubscribeAntagEvents<RevolutionaryRoleComponent>();
+        SubscribeAntagEvents<FleshCultistRoleComponent>();
         SubscribeAntagEvents<SubvertedSiliconRoleComponent>();
         SubscribeAntagEvents<TraitorRoleComponent>();
         SubscribeAntagEvents<ZombieRoleComponent>();

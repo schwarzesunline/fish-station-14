@@ -51,6 +51,7 @@
     - Service
     - Supply
     - Syndicate
+    - Flesh
     globalReceive: true
   - type: Physics
     bodyType: KinematicController

@@ -33,6 +33,7 @@ namespace Content.Shared.Alert
         Parched,
         Stamina,
         Pulled,
+        MutationPoint,
         Pulling,
         Magboots,
         Internals,

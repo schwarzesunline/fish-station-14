@@ -203,3 +203,5 @@ public sealed class CurrencyInsertAttemptEvent : CancellableEntityEventArgs
         Store = store;
     }
 }
+[ByRefEvent]
+public readonly record struct ItemPurchasedEvent(EntityUid Purchaser);

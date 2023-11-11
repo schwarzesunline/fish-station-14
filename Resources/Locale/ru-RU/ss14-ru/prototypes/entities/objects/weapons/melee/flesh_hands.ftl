@@ -1,0 +1,15 @@
+ent-FleshClaw = коготь из плоти
+    .desc = Коготь из плоти
+ent-FleshFist = клешня из плоти
+    .desc = клешня из плоти
+ent-FleshBlade = лезвие из плоти
+    .desc = Лезвие из плоти
+ent-FleshSpikeHandGun = шипастый пистолет
+    .desc = { ent-BaseItem.desc }
+ent-ClothingOuterArmorFlesh = броня культиста плоти
+	.desc = Сила плоти
+ent-MobHumanFleshCultist = культист плоти
+ent-ClothingFleshSpiderLegs = паучьи ноги из плоти
+	.desc = Скорость плоти
+ent-WallFlesh = стена из плоти
+	.desc = Стена из плоти

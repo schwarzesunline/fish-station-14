@@ -26,9 +26,6 @@
   id: ATVKeys
 
 - type: Tag
-  id: BlobMob
-  
-- type: Tag
   id: Baguette
 
 - type: Tag
@@ -1097,3 +1094,15 @@
 
 - type: Tag
   id: MindShield
+  
+- type: Tag
+  id: Directional
+  
+- type: Tag
+  id: HidesLegs 
+  
+- type: Tag
+  id: FullBodyOuter
+  
+- type: Tag
+  id: FleshBlocker
