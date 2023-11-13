@@ -1,6 +1,6 @@
 - type: font
   id: Default
-  path: /Fonts/NotoSans/NotoSans-Regular.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf
 
 - type: font
   id: DefaultItalic
@@ -8,27 +8,27 @@
 
 - type: font
   id: DefaultBold
-  path: /Fonts/NotoSans/NotoSans-Bold.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Bold.ttf
 
 - type: font
   id: DefaultBoldItalic
-  path: /Fonts/NotoSans/NotoSans-BoldItalic.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf
 
 - type: font
   id: NotoSansDisplay
-  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Regular.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Medium.ttf
 
 - type: font
   id: NotoSansDisplayItalic
-  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Italic.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Medium.ttf
 
 - type: font
   id: NotoSansDisplayBold
-  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Bold.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Bold.ttf
 
 - type: font
   id: NotoSansDisplayBoldItalic
-  path: /Fonts/NotoSansDisplay/NotoSansDisplay-BoldItalic.ttf
+  path: /Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf
 
 - type: font
   id: BoxRound
