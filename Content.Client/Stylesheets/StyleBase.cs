@@ -26,7 +26,7 @@ namespace Content.Client.Stylesheets
 
         public const string ButtonCaution = "Caution";
 
-        public const int DefaultGrabberSize = 12;
+        public const int DefaultGrabberSize = 10;
 
         public abstract Stylesheet Stylesheet { get; }
 
@@ -47,7 +47,9 @@ namespace Content.Client.Stylesheets
             (
                 new []
                 {
-                    "/Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Bold.ttf"
+                    "/Fonts/NotoSans/NotoSans-Regular.ttf",
+                    "/Fonts/NotoSans/NotoSansSymbols-Regular.ttf",
+                    "/Fonts/NotoSans/NotoSansSymbols2-Regular.ttf"
                 },
                 12
             );
@@ -55,7 +57,9 @@ namespace Content.Client.Stylesheets
             (
                 new []
                 {
-                    "/Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf"
+                    "/Fonts/NotoSans/NotoSans-Italic.ttf",
+                    "/Fonts/NotoSans/NotoSansSymbols-Regular.ttf",
+                    "/Fonts/NotoSans/NotoSansSymbols2-Regular.ttf"
                 },
                 12
             );
@@ -120,7 +124,7 @@ namespace Content.Client.Stylesheets
 
             var vScrollBarGrabberNormal = new StyleBoxFlat
             {
-                BackgroundColor = Color.DarkSlateBlue.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
+                BackgroundColor = Color.Gray.WithAlpha(0.35f), ContentMarginLeftOverride = DefaultGrabberSize,
                 ContentMarginTopOverride = DefaultGrabberSize
             };
             var vScrollBarGrabberHover = new StyleBoxFlat
@@ -136,7 +140,7 @@ namespace Content.Client.Stylesheets
 
             var hScrollBarGrabberNormal = new StyleBoxFlat
             {
-                BackgroundColor = Color.DarkKhaki.WithAlpha(0.35f), ContentMarginTopOverride = DefaultGrabberSize
+                BackgroundColor = Color.Gray.WithAlpha(0.35f), ContentMarginTopOverride = DefaultGrabberSize
             };
             var hScrollBarGrabberHover = new StyleBoxFlat
             {

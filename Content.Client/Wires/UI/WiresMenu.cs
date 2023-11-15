@@ -151,8 +151,8 @@ namespace Content.Client.Wires.UI
 
             LayoutContainer.SetAnchorPreset(topContainerWrap, LayoutContainer.LayoutPreset.Wide);
 
-            var font = _resourceCache.GetFont("/Fonts/ZenKakuGothicNew/ZenKakuGothicAntique-Bold.ttf", 13);
-            var fontSmall = _resourceCache.GetFont("/Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf", 10);
+            var font = _resourceCache.GetFont("/Fonts/Boxfont-round/Boxfont Round.ttf", 13);
+            var fontSmall = _resourceCache.GetFont("/Fonts/Boxfont-round/Boxfont Round.ttf", 10);
 
             Button helpButton;
             var topRow = new BoxContainer
@@ -201,7 +201,7 @@ namespace Content.Client.Wires.UI
 
             var middle = new PanelContainer
             {
-                PanelOverride = new StyleBoxFlat {BackgroundColor = Color.FromHex("#1f1f23") },
+                PanelOverride = new StyleBoxFlat {BackgroundColor = Color.FromHex("#202025")},
                 Children =
                 {
                     new BoxContainer
