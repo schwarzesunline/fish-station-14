@@ -21,3 +21,23 @@
 - type: stationGoal
   id: StationGoalZoo
   text: station-goal-zoo
+
+- type: stationGoal
+  id: StationZalupaOne
+  text: station-goal-one
+  
+- type: stationGoal
+  id: StationZalupaTwo
+  text: station-goal-two
+  
+- type: stationGoal
+  id: StationZalupaThree
+  text: station-goal-three
+  
+- type: stationGoal
+  id: StationZalupaChetire
+  text: station-goal-chetire
+  
+- type: stationGoal
+  id: StationZalupaFive
+  text: station-goal-five
