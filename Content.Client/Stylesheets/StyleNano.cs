@@ -27,9 +27,9 @@ namespace Content.Client.Stylesheets
                 // Ew, but ok
                 new[]
                 {
-                    $"/Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf",
-                    $"/Fonts/ZenKakuGothicNew/ZenKakuGothicNew-Black.ttf",
-                    "/Fonts/ZenKakuGothicNew/ZenKakuGothicAntique-Bold.ttf",
+                    $"/Fonts/NotoSans{ds}/NotoSans{ds}-{variation}.ttf",
+                    $"/Fonts/NotoSans/NotoSansSymbols-{sv}.ttf",
+                    "/Fonts/NotoSans/NotoSansSymbols2-Regular.ttf",
                 },
                 size
             );
@@ -454,7 +454,7 @@ namespace Content.Client.Stylesheets
             var sliderFillBox = new StyleBoxTexture
             {
                 Texture = sliderFillTex,
-                Modulate = Color.FromHex("#382c5c")
+                Modulate = Color.FromHex("#3E6C45")
             };
 
             var sliderBackBox = new StyleBoxTexture

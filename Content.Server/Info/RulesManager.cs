@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.Info;
