@@ -24,7 +24,7 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSec
+    jumpsuit: ClothingUniformPoloSec
     back: ClothingBackpackSecurityFilled
     shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
     eyes: ClothingEyesGlassesSecurity

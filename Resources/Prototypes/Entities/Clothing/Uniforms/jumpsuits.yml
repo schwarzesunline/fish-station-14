@@ -515,6 +515,17 @@
     sprite: Clothing/Uniforms/Jumpsuit/security.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+    
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPoloSec
+  name: security polo
+  description: A polo create for security, providing robust protection.
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Tshirts/ussecuritypolo.rsi
+  - type: Clothing
+    sprite: Clothing/Under/Tshirts/ussecuritypolo.rsi
 
 - type: entity
   parent: ClothingUniformBase
