@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat;
+using Content.Server.Database;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Shared.Administration;
@@ -34,6 +35,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private readonly IPlayerLocator _playerLocator = default!;
         [Dependency] private readonly GameTicker _gameTicker = default!;
         [Dependency] private readonly SharedMindSystem _minds = default!;
+        [Dependency] private readonly IServerDbManager _db = default!;
 
         private ISawmill _sawmill = default!;
         private readonly HttpClient _httpClient = new();
@@ -415,11 +417,14 @@ namespace Content.Server.Administration.Systems
             var escapedText = FormattedMessage.EscapeText(message.Text);
 
             var adminMgr = IoCManager.Resolve<IAdminManager>();
-            var adminSession = adminMgr.ActiveAdmins.ToList().Find(v => v.UserId == senderSession.UserId);
-            AdminData? adminData = null;
+            //var adminSession = adminMgr.ActiveAdmins.ToList().Find(v => v.UserId == senderSession.UserId);
+
+            var admin = _db.GetAdminDataForAsync(senderSession.UserId);
+            Admin? adminData = admin.GetAwaiter().GetResult();
             string adminPostFix = "";
 
-            if (adminSession is not null && (adminData = adminMgr.GetAdminData(adminSession)) is not null) {
+            if (adminData is not null && adminData.Title is not null)
+            {
                 adminPostFix = $" ({adminData.Title})";
             }
 
@@ -429,7 +434,7 @@ namespace Content.Server.Administration.Systems
                     $"[color=purple]{senderSession.Name}{adminPostFix}[/color]: {escapedText}",
                 var x when x is not null && x.HasFlag(AdminFlags.Adminhelp) =>
                     $"[color=red]{senderSession.Name}{adminPostFix}[/color]: {escapedText}",
-                _ => $"{senderSession.Name}: {escapedText}",
+                _ => $"{senderSession.Name}{adminPostFix}: {escapedText}",
             };
 
             var msg = new BwoinkTextMessage(message.UserId, senderSession.UserId, bwoinkText);
