@@ -238,3 +238,6 @@
 
   - node: service
     entity: BorgChassisService
+
+  - node: security
+    entity: BorgChassisSecuritron

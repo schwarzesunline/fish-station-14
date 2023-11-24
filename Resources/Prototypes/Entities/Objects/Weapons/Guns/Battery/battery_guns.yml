@@ -555,3 +555,31 @@
   - type: Appearance
   - type: StaticPrice
     price: 150
+    
+- type: entity
+  name: лазерный пистолет борга
+  parent: BaseWeaponBatterySmall
+  id: WeaponBorgLaserGun
+  description: Оружие, использующее свет, усиленный за счет вынужденного излучения.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: HitscanBatteryAmmoProvider
+    proto: RedLaser
+    fireCost: 120
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 30
+  - type: Appearance
+  - type: StaticPrice
+    price: 150

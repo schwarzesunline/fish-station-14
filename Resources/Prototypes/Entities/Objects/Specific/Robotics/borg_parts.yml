@@ -412,6 +412,96 @@
         - Trash
         - BorgMiningTorso
 
+# securitron parts
+- type: entity
+  id: LeftArmBorgSecuritron
+  parent: BaseBorgArmLeft
+  name: securitron cyborg left arm
+  components:
+  - type: Sprite
+    state: securitron_l_arm
+  - type: Icon
+    state: securitron_l_arm
+  - type: Tag
+    tags:
+    - Trash
+    - BorgArm
+    - BorgSecuritronLArm
+
+- type: entity
+  id: RightArmBorgSecuritron
+  parent: BaseBorgArmRight
+  name: securitron cyborg right arm
+  components:
+  - type: Sprite
+    state: securitron_r_arm
+  - type: Icon
+    state: securitron_r_arm
+  - type: Tag
+    tags:
+    - Trash
+    - BorgArm
+    - BorgSecuritronRArm
+
+- type: entity
+  id: LeftLegBorgSecuritron
+  parent: BaseBorgLegLeft
+  name: securitron cyborg left leg
+  components:
+  - type: Sprite
+    state: securitron_l_leg
+  - type: Icon
+    state: securitron_l_leg
+  - type: Tag
+    tags:
+    - Trash
+    - BorgLeg
+    - BorgSecuritronLLeg
+
+- type: entity
+  id: RightLegBorgSecuritron
+  parent: BaseBorgLegRight
+  name: securitron cyborg right leg
+  components:
+  - type: Sprite
+    state: securitron_r_leg
+  - type: Icon
+    state: securitron_r_leg
+  - type: Tag
+    tags:
+    - Trash
+    - BorgLeg
+    - BorgSecuritronRLeg
+
+- type: entity
+  id: HeadBorgSecuritron
+  parent: BaseBorgHead
+  name: securitron cyborg head
+  components:
+  - type: Sprite
+    state: securitron_head
+  - type: Icon
+    state: securitron_head
+  - type: Tag
+    tags:
+    - Trash
+    - BorgHead
+    - BorgSecuritronHead
+
+- type: entity
+  id: TorsoBorgSecuritron
+  parent: BaseBorgTorso
+  name: securitron cyborg torso
+  components:
+  - type: Sprite
+    state: securitron_chest
+  - type: Icon
+    state: securitron_chest
+  - type: Tag
+    tags:
+    - Trash
+    - BorgSecuritronTorso
+
 # service parts
 - type: entity
   id: LeftArmBorgService

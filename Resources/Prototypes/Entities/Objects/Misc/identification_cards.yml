@@ -35,6 +35,19 @@
     job: Passenger
 
 - type: entity
+  parent: IDCardStandard
+  id: TrackerSecBorg
+  name: теледатчик
+  description: Теледатчик передающий информацию о борге
+  components:
+  - type: Sprite
+    layers:
+    - state: teledatchik
+  - type: PresetIdCard
+    job: SecurityBorg
+  - type: Unremoveable
+
+- type: entity
   parent: PassengerIDCard
   id: TechnicalAssistantIDCard
   name: technical assistant ID card

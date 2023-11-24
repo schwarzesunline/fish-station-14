@@ -179,6 +179,42 @@
       "name": "mining_r_leg+o"
     },
     {
+      "name": "securitron_l_arm"
+    },
+    {
+      "name": "securitron_r_arm"
+    },
+    {
+      "name": "securitron_l_leg"
+    },
+    {
+      "name": "securitron_r_leg"
+    },
+    {
+      "name": "securitron_chest"
+    },
+    {
+      "name": "securitron_head"
+    },
+    {
+      "name": "securitron_head+o"
+    },
+    {
+      "name": "securitron_chest+o"
+    },
+    {
+      "name": "securitron_l_arm+o"
+    },
+    {
+      "name": "securitron_r_arm+o"
+    },
+    {
+      "name": "securitron_l_leg+o"
+    },
+    {
+      "name": "securitron_r_leg+o"
+    },
+    {
       "name": "service_l_arm"
     },
     {

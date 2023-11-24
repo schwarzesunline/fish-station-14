@@ -45,6 +45,13 @@
   icon:
     sprite: Interface/Misc/job_icons.rsi
     state: AtmosphericTechnician
+    
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconSecurityBorg
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: SecurityBorg
 
 - type: statusIcon
   parent: JobIcon

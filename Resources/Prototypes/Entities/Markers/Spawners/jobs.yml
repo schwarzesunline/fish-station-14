@@ -666,3 +666,14 @@
     layers:
       - state: green
       - state: lawyer
+      
+- type: entity
+  id: SpawnPointSecurityBorg
+  parent: SpawnPointJobBase
+  name: секьюритрон
+  components:
+  - type: SpawnPoint
+    job_id: SecurityBorg
+  - type: Sprite
+    layers:
+      - state: green

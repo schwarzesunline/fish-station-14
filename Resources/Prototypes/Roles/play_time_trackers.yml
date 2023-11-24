@@ -12,6 +12,9 @@
 
 - type: playTimeTracker # Used as a tracker for all borgs and midround borging.
   id: JobBorg
+  
+- type: playTimeTracker # Used as a tracker for all borgs and midround borging.
+  id: JobSecurityBorg
 
 - type: playTimeTracker
   id: JobBotanist

@@ -273,3 +273,29 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellMedium
+
+- type: entity
+  id: PlayerSecurityBorgGeneric
+  parent: BorgChassisSecuritron
+  suffix: Security
+  components:
+  - type: Inventory
+    templateId: silicon
+  - type: InventorySlots
+  - type: FlashImmunity
+  - type: ShowSecurityIcons
+  - type: EyeProtection
+    protectionTime: 5
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - MMIFilled
+      borg_module:
+      - BorgModuleSecurity
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: RandomMetadata
+    nameSegments: [names_borg]

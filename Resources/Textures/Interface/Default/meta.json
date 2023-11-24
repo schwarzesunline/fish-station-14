@@ -53,6 +53,9 @@
         "name": "id"
       },
       {
+        "name": "inventorysecborg"
+      },
+      {
         "name": "invtoggle"
       },
       {

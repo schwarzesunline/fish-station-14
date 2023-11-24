@@ -54,6 +54,30 @@
         whitelist:
           tags:
           - BorgGenericTorso
+      securitron_l_arm+o:
+        whitelist:
+          tags:
+          - BorgSecuritronLArm
+      securitron_r_arm+o:
+        whitelist:
+          tags:
+          - BorgSecuritronRArm
+      securitron_l_leg+o:
+        whitelist:
+          tags:
+          - BorgSecuritronLLeg
+      securitron_r_leg+o:
+        whitelist:
+          tags:
+          - BorgSecuritronRLeg
+      securitron_head+o:
+        whitelist:
+          tags:
+          - BorgSecuritronHead
+      securitron_chest+o:
+        whitelist:
+          tags:
+          - BorgSecuritronTorso
       service_l_arm+o:
         whitelist:
           tags:
@@ -179,13 +203,13 @@
       - BorgGenericRLeg
       - BorgGenericHead
       - BorgGenericTorso
-      service:
-      - BorgServiceLArm
-      - BorgServiceRArm
-      - BorgServiceLLeg
-      - BorgServiceRLeg
-      - BorgServiceHead
-      - BorgServiceTorso
+      securitron:
+      - BorgSecuritronLArm
+      - BorgSecuritronRArm
+      - BorgSecuritronLLeg
+      - BorgSecuritronRLeg
+      - BorgSecuritronHead
+      - BorgSecuritronTorso
       engineer:
       - BorgEngineerLArm
       - BorgEngineerRArm

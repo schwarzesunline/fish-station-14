@@ -162,3 +162,45 @@
   - type: Construction
     node: service
 
+- type: entity
+  id: BorgChassisSecuritron
+  parent: BaseBorgChassisNT
+  name: securitron cyborg
+  components:
+  - type: Sprite
+    layers:
+    - state: securitron
+    - state: securitron_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: securitron_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 2
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleSecurity
+    hasMindState: securitron_e
+    noMindState: securitron_e_r
+  - type: Construction
+    node: security
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: Loadout
+    prototypes: [ SecurityBorgGear ]
+  - type: ActiveRadio
+    channels:
+    - Security
+    - Binary
+    - Common
+    - Science
+  - type: AccessReader
+    access: [["Security"], ["Command"], ["Research"]]

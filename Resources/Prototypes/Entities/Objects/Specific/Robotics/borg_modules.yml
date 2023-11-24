@@ -455,3 +455,19 @@
     items:
     - BikeHorn
     - ClownRecorder
+
+- type: entity
+  id: BorgModuleSecurity
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
+  name: оружейный модуль киборга
+  components:
+  - type: Sprite
+    layers:
+    - state: security
+    - state: icon-laser-gun
+  - type: ItemBorgModule
+    items:
+    - WeaponBorgLaserGun
+    - StunbatonBorg
+    - Cablecuffs
+    - FlashBorg

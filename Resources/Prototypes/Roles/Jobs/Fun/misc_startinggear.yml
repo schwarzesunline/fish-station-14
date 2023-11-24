@@ -350,3 +350,10 @@
     back: SpearBone
     head: ClothingHeadHelmetBone
     shoes: ClothingShoesCult
+
+- type: startingGear
+  id: SecurityBorgGear
+  equipment:
+    id: TrackerSecBorg
+    back: JetpackSecBorgVoidFilled
+    shoes: ClothingShoesBootsMagSecBorg

@@ -10,3 +10,5 @@ ent-BorgChassisMedical = киборг-доктор
     .desc = { ent-BaseBorgChassisNT.desc }
 ent-BorgChassisService = киборг-официант
     .desc = { ent-BaseBorgChassisNT.desc }
+ent-BorgChassisSecuritron = киборг-секьюритрон
+    .desc = { ent-BaseBorgChassisNT.desc }

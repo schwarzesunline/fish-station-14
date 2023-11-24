@@ -1,0 +1,22 @@
+- type: job
+  id: SecurityBorg
+  name: секьюритрон
+  description: Защищайте экипаж от угроз. Подчиняйтесь службе безопасности.
+  playTimeTracker: JobSecurityBorg
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 14400
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000
+  icon: JobIconSecurityBorg
+  supervisors: job-supervisors-hos
+  startingGear: SecurityOfficerGear
+  jobEntity: PlayerSecurityBorgGeneric
+  canBeAntag: false
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplant ]
+    

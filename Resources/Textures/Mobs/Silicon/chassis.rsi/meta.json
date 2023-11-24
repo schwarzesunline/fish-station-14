@@ -200,6 +200,22 @@
     {
       "name": "service_l",
       "directions": 4
+    },
+    {
+      "name": "securitron",
+      "directions": 4
+    },
+    {
+      "name": "securitron_e",
+      "directions": 4
+    },
+    {
+      "name": "securitron_e_r",
+      "directions": 4
+    },
+    {
+      "name": "securitron_l",
+      "directions": 4
     }
   ]
 }

@@ -199,6 +199,7 @@
 - type: entity
   id: BaseBorgChassisNT
   parent: BaseBorgChassis
+  description: Гибрид человека и машины. Им нравится, когда их просят назвать свои законы снова и снова.
   abstract: true
   components:
   - type: NpcFactionMember

@@ -151,3 +151,36 @@
   - type: InstantAction
     icon: { sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi, state: icon }
     iconOn: Clothing/Shoes/Boots/magboots-syndicate.rsi/icon-on.png
+    
+- type: entity
+  id: ActionToggleMagbootsSecBorg
+  parent: ActionBaseToggleMagboots
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Clothing/Shoes/Boots/magbootsecborg.rsi, state: icon }
+    iconOn: Clothing/Shoes/Boots/magbootsecborg.rsi/icon-on.png
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsMagSecBorg
+  name: магнитные ботинки
+  description: Магнитные ботинки, часто используемые во время выхода в открытый космос киборга.
+  noSpawn: true
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/Shoes/Boots/magbootsecborg.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Shoes/Boots/magbootsecborg.rsi
+  - type: Magboots
+    toggleAction: ActionToggleMagbootsSecBorg
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.7
+    enabled: false
+  - type: NoSlip
+  - type: Tag
+  - type: StaticPrice
+    price: 750
