@@ -79,6 +79,15 @@
     tags:
     - BorgModuleService
 
+- type: entity
+  id: BaseBorgModuleSecurity
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleSecurity
+
 # generic modules
 - type: entity
   id: BorgModuleCable
