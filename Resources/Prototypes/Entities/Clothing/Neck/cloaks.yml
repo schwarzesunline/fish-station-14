@@ -159,3 +159,13 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: TypingIndicatorClothing
     proto: moth
+
+#Mosley
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakNanotrasenRepresentive
+  name: плащ представителя Nanotrasen
+  description: Величественный темный плащ, символизирующий NanoTrasen.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Cloaks/ntr.rsi

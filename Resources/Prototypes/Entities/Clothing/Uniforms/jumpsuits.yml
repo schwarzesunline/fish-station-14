@@ -1417,6 +1417,7 @@
       - state: equipped-INNERCLOTHING-shirt
         color: "#b30000"
 
+#Mosley
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlueshield
@@ -1432,3 +1433,14 @@
       coefficients:
         Slash: 0.9
         Piercing: 0.9
+        
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNTRepresentive
+  name: униформа представителя Nanotrasen
+  description: Черная униформа с золотистыми выделками, черными брюками и логотипом Нанотрайзен - стиль бюрократии.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/ntr_suit.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/ntr_suit.rsi
