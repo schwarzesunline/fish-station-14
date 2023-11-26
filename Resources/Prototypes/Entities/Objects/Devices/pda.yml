@@ -950,6 +950,7 @@
   - type: Icon
     state: pda-seniorofficer
 
+#Mosley
 - type: entity
   parent: BasePDA
   id: BlueshieldPDA
@@ -961,3 +962,39 @@
     state: pda-bs
   - type: Icon
     state: pda-bs
+    
+- type: entity
+  parent: BasePDA
+  id: InvestigatorPDA
+  name: КПК следователя
+  description: Выглядит элегантно.
+  components:
+  - type: Pda
+    id: InvestigatorIDCard
+    state: pda-investigator
+  - type: Icon
+    state: pda-investigator
+    
+- type: entity
+  parent: BasePDA
+  id: MagistratPDA
+  name: КПК магистрата
+  description: Изможденный временем, влагает в себя аромат закона и судебной власти.
+  components:
+  - type: Pda
+    id: MagistratIDCard
+    state: pda-magistrat
+  - type: Icon
+    state: pda-magistrat
+
+- type: entity
+  parent: BasePDA
+  id: NanotrasenRepresentivePDA
+  name: КПК представителя Nanotrasen
+  description: Представляет вашу идею.
+  components:
+  - type: Pda
+    id: NanotrasenRepresentiveIDCard
+    state: pda-ntr
+  - type: Icon
+    state: pda-ntr

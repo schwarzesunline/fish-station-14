@@ -37,3 +37,10 @@ ent-LockerHeadOfSecurityFilledHardsuit = { ent-LockerHeadOfSecurity }
 ent-LockerHeadOfSecurityFilled = { ent-LockerHeadOfSecurity }
     .suffix = Заполненный
     .desc = { ent-LockerHeadOfSecurity.desc }
+ent-LockerNanotrasenRepresentiveFilled = { ent-LockerNanotrasenRepresentive }
+    .suffix = Заполненный
+    .desc = { ent-LockerNanotrasenRepresentive.desc }
+ent-LockerMagistratFilled = { ent-LockerMagistrat }
+    .suffix = Заполненный
+    .desc = { ent-LockerMagistrat.desc }
+

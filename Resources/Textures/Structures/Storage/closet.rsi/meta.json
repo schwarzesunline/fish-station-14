@@ -125,6 +125,24 @@
       "name": "cabinet_open"
     },
     {
+      "name": "mag"
+    },
+    {
+      "name": "mag_door"
+    },
+    {
+      "name": "mag_open"
+    },
+    {
+      "name": "ntr"
+    },
+    {
+      "name": "ntr_door"
+    },
+    {
+      "name": "ntr_open"
+    },
+    {
       "name": "cap"
     },
     {

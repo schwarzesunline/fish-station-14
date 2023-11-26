@@ -644,6 +644,7 @@
       - state: green
       - state: zookeeper
 
+#Mosley
 - type: entity
   id: SpawnPointBlueshield
   parent: SpawnPointJobBase
@@ -674,6 +675,39 @@
   components:
   - type: SpawnPoint
     job_id: SecurityBorg
+  - type: Sprite
+    layers:
+      - state: green
+      
+- type: entity
+  id: SpawnPointInvestigator
+  parent: SpawnPointJobBase
+  name: следователь
+  components:
+  - type: SpawnPoint
+    job_id: Investigator
+  - type: Sprite
+    layers:
+      - state: green
+      
+- type: entity
+  id: SpawnPointNanotrasenRepresentive
+  parent: SpawnPointJobBase
+  name: представитель Nanotrasen
+  components:
+  - type: SpawnPoint
+    job_id: NanotrasenRepresentive
+  - type: Sprite
+    layers:
+      - state: green
+      
+- type: entity
+  id: SpawnPointMagistrat
+  parent: SpawnPointJobBase
+  name: магистрат
+  components:
+  - type: SpawnPoint
+    job_id: Magistrat
   - type: Sprite
     layers:
       - state: green

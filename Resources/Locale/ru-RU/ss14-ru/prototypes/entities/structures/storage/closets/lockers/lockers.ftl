@@ -61,3 +61,7 @@ ent-LockerSyndicatePersonal = оружейный шкаф
 ent-LockerBluespaceStation = блюспейс шкаф
     .desc = Передовая технология шкафчикостроения.
     .suffix = once to station
+ent-LockerMagistrat = шкаф магистрата
+    .desc = { ent-LockerBaseSecure.desc }
+ent-LockerNanotrasenRepresentive = шкаф представителя Nanotrasen
+    .desc = { ent-LockerBaseSecure.desc }

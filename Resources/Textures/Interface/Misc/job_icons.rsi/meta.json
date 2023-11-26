@@ -12,6 +12,15 @@
             "name": "Detective"
         },
         {
+            "name": "Magistrat"
+        },
+        {
+            "name": "Investigator"
+        },
+        {
+            "name": "NanotrasenRepresentive"
+        },	
+        {
             "name": "QuarterMaster"
         },
         {

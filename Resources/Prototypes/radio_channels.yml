@@ -54,6 +54,13 @@
   keycode: 'с' # Corvax-Localization
   frequency: 1349
   color: "#6ca729"
+  
+- type: radioChannel
+  id: Juridical
+  name: chat-radio-juridical
+  keycode: 'ю'
+  frequency: 1348
+  color: "#987654"
 
 - type: radioChannel
   id: Supply

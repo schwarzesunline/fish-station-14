@@ -5,13 +5,13 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 72000
+      time: 54000
     - !type:DepartmentTimeRequirement
-      department: Security
-      time: 36000
+      department: Juridical
+      time: 23000
   startingGear: IAAGear
   icon: "JobIconIAA"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-magistrat
   canBeAntag: false
   access:
     - Service
@@ -26,12 +26,12 @@
 - type: startingGear
   id: IAAGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
     back: ClothingBackpackIAAFilled
     shoes: ClothingShoesColorBlack
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
-    ears: ClothingHeadsetIAA
+    ears: ClothingHeadsetJuridical
     neck: ClothingNeckLawyerbadge
   innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
   satchel: ClothingBackpackSatchelIAAFilled

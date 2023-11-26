@@ -21,7 +21,6 @@
   - Clown
   - HeadOfPersonnel
   - Janitor
-  - Lawyer
   - Librarian
   - Mime
   - Musician
@@ -31,14 +30,24 @@
   - ServiceWorker
 
 - type: department
+  id: Juridical
+  description: department-Juridical-description
+  color: "#987654"
+  roles:
+  - Magistrat
+  - IAA
+  - Lawyer
+
+- type: department
   id: Command
   description: department-Command-description
   color: "#334E6D"
   roles:
   - Captain
-  - IAA # Corvax-IAA
   - Blueshield
   - CentralCommandOfficial
+  - NanotrasenRepresentive
+  - Magistrat
   - ChiefEngineer
   - ChiefMedicalOfficer
   - HeadOfPersonnel
@@ -76,12 +85,14 @@
   color: "#DE3A3A"
   roles:
   - HeadOfSecurity
+  - Brigmedic
   - SecurityBorg
   - SecurityCadet
   - SecurityOfficer
   - SeniorOfficer
   - Detective
   - Warden
+  - Investigator
 
 - type: department
   id: Science

@@ -65,6 +65,15 @@
       "name": "idcentcom"
     },
     {
+      "name": "idmagistrat"
+    },
+    {
+      "name": "idntr"
+    },
+    {
+      "name": "idinvestigator"
+    },
+    {
       "name": "idchaplain"
     },
     {
@@ -208,7 +217,7 @@
     {
       "name": "syndie"
     },
-	{
+    {
       "name": "idcluwne"
     },
     {

@@ -78,5 +78,6 @@
       - EncryptionKeyMedical
       - EncryptionKeyScience
       - EncryptionKeySecurity
+      - EncryptionKeyJuridical
       - EncryptionKeyService
       - EncryptionKeyCommand

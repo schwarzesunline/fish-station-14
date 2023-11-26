@@ -13,4 +13,5 @@
     EncryptionKeyMedical: 2
     EncryptionKeyScience: 2
     EncryptionKeySecurity: 1
+    EncryptionKeyJuridical: 1
     EncryptionKeyService: 3

@@ -451,3 +451,14 @@
     layers:
       - state: box
       - state: darts
+      
+#Mosley
+- type: entity
+  name: коробка ключей шифрования юридического отдела
+  parent: BoxEncryptionKeyPassenger
+  id: BoxEncryptionKeyJuridical
+  components:
+  - type: StorageFill
+    contents:
+      - id: EncryptionKeyJuridical
+        amount: 6

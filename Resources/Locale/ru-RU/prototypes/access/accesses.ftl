@@ -30,3 +30,6 @@ id-card-access-level-maintenance = Техобслуживание
 id-card-access-level-external = Внешний
 id-card-access-level-nuclear-operative = Ядерный оперативник
 id-card-access-level-syndicate-agent = Агент синдиката
+id-card-access-level-nanotrasenrepresentive = Представитель Нанотрейзен
+id-card-access-level-magistrat = Магистрат
+id-card-access-level-investigator = Следователь

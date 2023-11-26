@@ -272,3 +272,34 @@
   - type: Clothing
     sprite: Clothing/Ears/Headsets/service.rsi
 
+#Mosley
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetJuridical
+  name: гарнитура юридического отдела
+  description: Алё.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyJuridical
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/juridical.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/juridical.rsi
+    
+- type: entity
+  parent: ClothingHeadsetJuridical
+  id: ClothingHeadsetMagistrat
+  name: гарнитура магистрата
+  description: Я слушаю.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyJuridical
+      - EncryptionKeySecurity
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon

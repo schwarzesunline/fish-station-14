@@ -9,7 +9,7 @@
   startingGear: LawyerGear
   setPreference: true
   icon: "JobIconLawyer"
-  supervisors: job-supervisors-hop
+  supervisors: job-supervisors-magistrat
   access:
   - Service
   - Brig
@@ -18,12 +18,12 @@
 - type: startingGear
   id: LawyerGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitLawyerBlack  # TODO change jumpsuit to randomiser of the 4 variants
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
     back: ClothingBackpackFilled
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
-    ears: ClothingHeadsetService
-    # TODO add copy of space law
+    ears: ClothingHeadsetJuridical
+
   inhand:
     - BriefcaseBrownFilled
   innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack

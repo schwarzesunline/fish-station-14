@@ -50,6 +50,9 @@
       "name": "pda-ce"
     },
     {
+      "name": "pda-ntr"
+    },
+    {
       "name": "pda-chaplain"
     },
     {
@@ -69,6 +72,15 @@
     },
     {
       "name": "pda-detective"
+    },
+    {
+      "name": "pda-investigator"
+    },
+    {
+      "name": "pda-iaa"
+    },
+    {
+      "name": "pda-magistrat"
     },
     {
       "name": "pda-engineer"

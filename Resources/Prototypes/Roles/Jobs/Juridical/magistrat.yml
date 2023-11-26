@@ -1,0 +1,47 @@
+- type: job
+  id: Magistrat
+  name: job-name-magistrat
+  description: job-description-magistrat
+  playTimeTracker: JobMagistrat
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 54000
+    - !type:DepartmentTimeRequirement
+      department: Juridical
+      time: 43200
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  startingGear: MagistratGear
+  setPreference: true
+  icon: "JobIconMagistrat"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  access:
+  - Command
+  - Maintenance
+  - External
+  - Brig
+  - Security
+  - Magistrat
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+    
+- type: startingGear
+  id: MagistratGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitLawyerBlack
+    head: ClothingHeadHatPwig
+    back: ClothingBackpackFilled
+    outerClothing: ClothingOuterRobesJudge
+    shoes: ClothingShoesBootsLaceup
+    neck: ClothingNeckTieRed
+    id: MagistratPDA
+    ears: ClothingHeadsetAltJuridical
+    pocket1: Flash
+  inhand:
+    - BriefcaseBrownFilled
+  innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

@@ -769,6 +769,7 @@
   - type: PresetIdCard
     job: SeniorOfficer
 
+#Mosley
 - type: entity
   parent: IDCardStandard
   id: BlueshieldIDCard
@@ -776,7 +777,43 @@
   components:
   - type: Sprite
     layers:
-    - state: default
+    - state: silver
     - state: idblueshield
   - type: PresetIdCard
     job: Blueshield
+    
+- type: entity
+  parent: IDCardStandard
+  id: InvestigatorIDCard
+  name: ID карта следователя
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idinvestigator
+  - type: PresetIdCard
+    job: Investigator
+    
+- type: entity
+  parent: IDCardStandard
+  id: MagistratIDCard
+  name: ID карта магистрата
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idmagistrat
+  - type: PresetIdCard
+    job: Magistrat
+    
+- type: entity
+  parent: IDCardStandard
+  id: NanotrasenRepresentiveIDCard
+  name: ID карта представителя Nanotrasen
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idntr
+  - type: PresetIdCard
+    job: NanotrasenRepresentive

@@ -13,6 +13,14 @@
 - type: accessLevel
   id: Blueshield
   name: id-card-access-level-blueshield
+  
+- type: accessLevel
+  id: NanotrasenRepresentive
+  name: id-card-access-level-nanotrasenrepresentive
+  
+- type: accessLevel
+  id: Magistrat
+  name: id-card-access-level-magistrat
 
 - type: accessGroup
   id: Command
@@ -21,6 +29,8 @@
   - Captain
   - HeadOfPersonnel
   - Blueshield
+  - NanotrasenRepresentive
+  - Magistrat
 
 - type: accessLevel
   id: EmergencyShuttleRepealAll

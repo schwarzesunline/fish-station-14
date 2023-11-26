@@ -1,0 +1,39 @@
+- type: job
+  id: Investigator
+  name: job-name-investigator
+  description: job-description-investigator
+  playTimeTracker: JobInvestigator
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 18000
+  startingGear: InvestigatorGear
+  icon: "JobIconInvestigator"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Investigator
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: InvestigatorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSuperstarCop
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsJackSec # Corvax-Resprite-MRP
+    eyes: ClothingEyesGlassesSunglasses
+    neck: ClothingNeckHorrific
+    head: ClothingHeadHatInvestigatorHat
+    outerClothing: ClothingOuterCoatInvestigatorTrench
+    id: InvestigatorPDA
+    ears: ClothingHeadsetSecurity
+    pocket1: WeaponDisabler
+    belt: ClothingBeltSecurityFilled
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled

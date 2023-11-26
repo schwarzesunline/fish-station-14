@@ -408,6 +408,7 @@
         destroyAfterUses: 2
         destroyType: DeleteComponent
 
+#Mosley
 - type: entity
   id: LockerBlueshield
   parent: LockerBaseSecure
@@ -436,3 +437,52 @@
     - id: MagazinePistolSubMachineGun
       amount: 2
     - id: ClothingBackpackBlueshield
+    
+- type: entity
+  id: LockerMagistrat
+  parent: LockerBaseSecure
+  name: шкаф магистрата
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: mag
+    stateDoorOpen: mag_open
+    stateDoorClosed: mag_door
+  - type: AccessReader
+    access: [["Magistrat"]]
+    
+- type: entity
+  id: LockerMagistratFilled
+  suffix: Filled
+  parent: LockerMagistrat
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxEncryptionKeyJuridical
+    - id: WeaponDisabler
+    - id: Flash
+    - id: ClothingHeadsetMagistrat
+    
+- type: entity
+  id: LockerNanotrasenRepresentive
+  parent: LockerBaseSecure
+  name: шкаф представителя Nanotrasen
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: ntr
+    stateDoorOpen: ntr_open
+    stateDoorClosed: ntr_door
+  - type: AccessReader
+    access: [["NanotrasenRepresentive"]]
+    
+- type: entity
+  id: LockerNanotrasenRepresentiveFilled
+  suffix: Filled
+  parent: LockerNanotrasenRepresentive
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponDisabler
+    - id: Flash
+    - id: ClothingNeckCloakNanotrasenRepresentive

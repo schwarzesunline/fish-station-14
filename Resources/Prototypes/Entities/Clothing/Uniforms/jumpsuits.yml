@@ -1437,8 +1437,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNTRepresentive
-  name: униформа представителя Nanotrasen
-  description: Черная униформа с золотистыми выделками, черными брюками и логотипом Нанотрайзен - стиль бюрократии.
+  name: униформа представителя NanoTrasen
+  description: Черная униформа с золотистыми выделками, черными брюками и логотипом NanoTrasen - стиль бюрократии.
   components:
   - type: Sprite
     sprite: Clothing/Uniforms/Jumpsuit/ntr_suit.rsi

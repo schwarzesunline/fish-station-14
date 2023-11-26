@@ -37,10 +37,13 @@
       - HeadOfPersonnel
       - HeadOfSecurity
       - Hydroponics
+      - Investigator
       - Janitor
       - Kitchen
+      - Magistrat
       - Maintenance
       - Medical
+      - NanotrasenRepresentive
       - Quartermaster
       - Research
       - ResearchDirector
