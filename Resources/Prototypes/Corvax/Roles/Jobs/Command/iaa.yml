@@ -19,6 +19,7 @@
     - Maintenance
     - Command
     - External
+    - Lawyer
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

@@ -12,6 +12,7 @@
   supervisors: job-supervisors-magistrat
   access:
   - Service
+  - Lawyer
   - Brig
   - Maintenance
 

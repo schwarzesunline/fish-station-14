@@ -374,3 +374,14 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.8
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadHelmetPodWars
+  name: ironclad II helmet
+  description: An ironclad II helmet, a relic of the pod wars.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/podwars_helmet.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/podwars_helmet.rsi

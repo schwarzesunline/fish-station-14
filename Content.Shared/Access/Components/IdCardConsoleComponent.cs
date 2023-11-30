@@ -66,6 +66,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Janitor",
         "Kitchen",
         "Magistrat",
+        "Lawyer",
         "Maintenance",
         "Medical",
         "NanotrasenRepresentive",

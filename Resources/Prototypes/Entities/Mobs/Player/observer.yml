@@ -51,7 +51,9 @@
     - Service
     - Supply
     - Syndicate
+    - Juridical
     - Flesh
+    - Freelance
     globalReceive: true
   - type: Physics
     bodyType: KinematicController
