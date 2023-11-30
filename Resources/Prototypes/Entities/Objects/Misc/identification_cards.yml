@@ -809,7 +809,7 @@
 - type: entity
   parent: IDCardStandard
   id: NanotrasenRepresentiveIDCard
-  name: ID карта представителя Nanotrasen
+  name: ID карта представителя NanoTrasen
   components:
   - type: Sprite
     layers:

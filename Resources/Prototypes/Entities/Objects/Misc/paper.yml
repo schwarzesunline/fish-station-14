@@ -629,6 +629,36 @@
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi
     state: stamp-centcom
+    
+#Mosley
+- type: entity
+  name: печать магистрата
+  parent: RubberStampBase
+  id: RubberStampMagistrat
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: Магистрат
+    stampedColor: "#987654"
+    stampState: "paper_stamp-magistrat"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-magistrat
+    
+- type: entity
+  name: печать представителя NanoTrasen
+  parent: RubberStampBase
+  id: RubberStampNanotrasenRepresentive
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: Представитель NanoTrasen
+    stampedColor: "#CEAC00"
+    stampState: "paper_stamp-ntr"
+  - type: Sprite
+    sprite: Objects/Misc/bureaucracy.rsi
+    state: stamp-ntr
+#Mosley end
 
 - type: entity
   name: chaplain's rubber stamp

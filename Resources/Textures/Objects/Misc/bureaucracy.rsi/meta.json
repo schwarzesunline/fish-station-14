@@ -133,6 +133,12 @@
       "name": "paper_stamp-qm"
     },
     {
+      "name": "paper_stamp-magistrat"
+    },
+    {
+      "name": "paper_stamp-ntr"
+    },
+    {
       "name": "paper_stamp-rd"
     },
     {
@@ -250,6 +256,12 @@
     },
     {
       "name": "stamp-cap"
+    },
+    {
+      "name": "stamp-ntr"
+    },
+    {
+      "name": "stamp-magistrat"
     },
     {
       "name": "stamp-ce"

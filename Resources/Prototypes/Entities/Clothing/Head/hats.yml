@@ -807,7 +807,7 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatCapNtr
   name: фуражка представителя Nanotrasen
-  description: Шикарная, стильная фуражка представителя Nanotrasen.
+  description: Шикарная, стильная фуражка представителя NanoTrasen.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hats/capntr.rsi

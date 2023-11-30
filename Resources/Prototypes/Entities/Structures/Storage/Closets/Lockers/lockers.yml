@@ -462,11 +462,12 @@
     - id: WeaponDisabler
     - id: Flash
     - id: ClothingHeadsetMagistrat
+    - id: RubberStampMagistrat
     
 - type: entity
   id: LockerNanotrasenRepresentive
   parent: LockerBaseSecure
-  name: шкаф представителя Nanotrasen
+  name: шкаф представителя NanoTrasen
   components:
   - type: Appearance
   - type: EntityStorageVisuals
@@ -486,3 +487,5 @@
     - id: WeaponDisabler
     - id: Flash
     - id: ClothingNeckCloakNanotrasenRepresentive
+    - id: RubberStampNanotrasenRepresentive
+#Mosley end

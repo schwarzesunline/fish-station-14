@@ -15,7 +15,6 @@
   - Security
   - Brig
   - Maintenance
-  - Service
   - Investigator
   special:
   - !type:AddImplantSpecial
@@ -34,6 +33,5 @@
     id: InvestigatorPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponDisabler
-    belt: ClothingBeltSecurityFilled
   satchel: ClothingBackpackSatchelSecurityFilled
   duffelbag: ClothingBackpackDuffelSecurityFilled

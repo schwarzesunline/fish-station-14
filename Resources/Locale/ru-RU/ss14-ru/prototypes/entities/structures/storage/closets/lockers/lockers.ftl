@@ -63,5 +63,5 @@ ent-LockerBluespaceStation = блюспейс шкаф
     .suffix = once to station
 ent-LockerMagistrat = шкаф магистрата
     .desc = { ent-LockerBaseSecure.desc }
-ent-LockerNanotrasenRepresentive = шкаф представителя Nanotrasen
+ent-LockerNanotrasenRepresentive = шкаф представителя NanoTrasen
     .desc = { ent-LockerBaseSecure.desc }

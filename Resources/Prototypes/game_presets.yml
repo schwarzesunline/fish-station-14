@@ -3,7 +3,7 @@
   alias:
     - survival
   name: survival-title
-  showInVote: true # secret
+  showInVote: false # secret
   description: survival-description
   rules:
     - RampingStationEventScheduler
@@ -82,7 +82,7 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
-  showInVote: true
+  showInVote: false
   rules:
     - Nukeops
     - BasicStationEventScheduler
@@ -95,7 +95,7 @@
     - revolutionaries
   name: rev-title
   description: rev-description
-  showInVote: true
+  showInVote: false
   rules:
     - Revolutionary
     - BasicStationEventScheduler
@@ -110,7 +110,7 @@
   - zomber
   name: zombie-title
   description: zombie-description
-  showInVote: true
+  showInVote: false
   rules:
   - Zombie
   - BasicStationEventScheduler
@@ -132,7 +132,7 @@
     - madness
     - fleshcultandtraitor
   name: flesh-cult-and-traitor-title
-  showInVote: true
+  showInVote: false
   description: flesh-cult-and-traitor-description
   rules:
     - FleshCult
@@ -146,7 +146,7 @@
     - fs
   name: flesh-cult-title
   description: flesh-cult-description
-  showInVote: true
+  showInVote: false
   rules:
     - FleshCult
     - BasicStationEventScheduler

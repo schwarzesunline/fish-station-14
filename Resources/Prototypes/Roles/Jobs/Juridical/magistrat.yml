@@ -9,7 +9,7 @@
       time: 54000
     - !type:DepartmentTimeRequirement
       department: Juridical
-      time: 43200
+      time: 21600
     - !type:OverallPlaytimeRequirement
       time: 36000
   startingGear: MagistratGear
@@ -36,7 +36,7 @@
     back: ClothingBackpackFilled
     outerClothing: ClothingOuterRobesJudge
     shoes: ClothingShoesBootsLaceup
-    neck: ClothingNeckTieRed
+    neck: ClothingNeckLawyerbadge
     id: MagistratPDA
     ears: ClothingHeadsetAltJuridical
     pocket1: Flash

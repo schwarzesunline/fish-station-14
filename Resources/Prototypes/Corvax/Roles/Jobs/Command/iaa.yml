@@ -5,10 +5,10 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 54000
+      time: 21600
     - !type:DepartmentTimeRequirement
       department: Juridical
-      time: 23000
+      time: 18000
   startingGear: IAAGear
   icon: "JobIconIAA"
   supervisors: job-supervisors-magistrat

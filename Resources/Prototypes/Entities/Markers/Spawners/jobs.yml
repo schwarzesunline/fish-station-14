@@ -693,7 +693,7 @@
 - type: entity
   id: SpawnPointNanotrasenRepresentive
   parent: SpawnPointJobBase
-  name: представитель Nanotrasen
+  name: представитель NanoTrasen
   components:
   - type: SpawnPoint
     job_id: NanotrasenRepresentive
