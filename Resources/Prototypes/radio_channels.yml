@@ -101,6 +101,7 @@
   frequency: 8120
   color: "#cf1b48"
 
+- type: radioChannel
   id: Freelance
   name: chat-radio-freelance
   keycode: 'f'

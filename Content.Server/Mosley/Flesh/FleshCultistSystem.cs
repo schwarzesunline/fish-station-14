@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Actions;
 using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
@@ -36,6 +36,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Content.Shared.Random;
+using Content.Shared.Cloning;
 using Content.Shared.Tag;
 using Robust.Shared.Audio;
 using Robust.Shared.Collections;
@@ -112,71 +113,71 @@ public sealed partial class FleshCultistSystem : EntitySystem
         switch (args.NewMobState)
         {
             case MobState.Critical:
-            {
-                EnsureComp<CuffableComponent>(uid);
-                var hands = _handsSystem.EnumerateHands(uid);
-                var enumerateHands = hands as Hand[] ?? hands.ToArray();
-                foreach (var enumerateHand in enumerateHands)
                 {
-                    if (enumerateHand.Container == null)
-                        continue;
-                    foreach (var containerContainedEntity in enumerateHand.Container.ContainedEntities)
+                    EnsureComp<CuffableComponent>(uid);
+                    var hands = _handsSystem.EnumerateHands(uid);
+                    var enumerateHands = hands as Hand[] ?? hands.ToArray();
+                    foreach (var enumerateHand in enumerateHands)
                     {
-                        if (!TryComp(containerContainedEntity, out MetaDataComponent? metaData))
+                        if (enumerateHand.Container == null)
                             continue;
-                        if (metaData.EntityPrototype == null)
-                            continue;
-                        if (metaData.EntityPrototype.ID != component.BladeSpawnId &&
-                            metaData.EntityPrototype.ID != component.ClawSpawnId &&
-                            metaData.EntityPrototype.ID != component.SpikeHandGunSpawnId &&
-                            metaData.EntityPrototype.ID != component.FistSpawnId)
-                            continue;
-                        QueueDel(containerContainedEntity);
-                        _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                        foreach (var containerContainedEntity in enumerateHand.Container.ContainedEntities)
+                        {
+                            if (!TryComp(containerContainedEntity, out MetaDataComponent? metaData))
+                                continue;
+                            if (metaData.EntityPrototype == null)
+                                continue;
+                            if (metaData.EntityPrototype.ID != component.BladeSpawnId &&
+                                metaData.EntityPrototype.ID != component.ClawSpawnId &&
+                                metaData.EntityPrototype.ID != component.SpikeHandGunSpawnId &&
+                                metaData.EntityPrototype.ID != component.FistSpawnId)
+                                continue;
+                            QueueDel(containerContainedEntity);
+                            _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                        }
                     }
-                }
 
-                break;
-            }
+                    break;
+                }
             case MobState.Dead:
-            {
-                _inventory.TryGetSlotEntity(uid, "shoes", out var shoes);
-                if (shoes != null)
                 {
-                    if (TryComp(shoes, out MetaDataComponent? metaData))
+                    _inventory.TryGetSlotEntity(uid, "shoes", out var shoes);
+                    if (shoes != null)
                     {
-                        if (metaData.EntityPrototype != null)
+                        if (TryComp(shoes, out MetaDataComponent? metaData))
                         {
-                            if (metaData.EntityPrototype.ID == component.SpiderLegsSpawnId)
+                            if (metaData.EntityPrototype != null)
                             {
-                                EntityManager.DeleteEntity(shoes.Value);
-                                _movement.RefreshMovementSpeedModifiers(uid);
-                                _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                                if (metaData.EntityPrototype.ID == component.SpiderLegsSpawnId)
+                                {
+                                    EntityManager.DeleteEntity(shoes.Value);
+                                    _movement.RefreshMovementSpeedModifiers(uid);
+                                    _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                                }
                             }
                         }
                     }
-                }
 
-                _inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothing);
-                if (outerClothing != null)
-                {
-                    if (TryComp(outerClothing, out MetaDataComponent? metaData))
+                    _inventory.TryGetSlotEntity(uid, "outerClothing", out var outerClothing);
+                    if (outerClothing != null)
                     {
-                        if (metaData.EntityPrototype != null)
+                        if (TryComp(outerClothing, out MetaDataComponent? metaData))
                         {
-                            if (metaData.EntityPrototype.ID == component.ArmorSpawnId)
+                            if (metaData.EntityPrototype != null)
                             {
-                                EntityManager.DeleteEntity(outerClothing.Value);
-                                _movement.RefreshMovementSpeedModifiers(uid);
-                                _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                                if (metaData.EntityPrototype.ID == component.ArmorSpawnId)
+                                {
+                                    EntityManager.DeleteEntity(outerClothing.Value);
+                                    _movement.RefreshMovementSpeedModifiers(uid);
+                                    _audioSystem.PlayPvs(component.SoundMutation, uid, component.SoundMutation.Params);
+                                }
                             }
                         }
                     }
-                }
 
-                ParasiteComesOut(uid, component);
-                break;
-            }
+                    ParasiteComesOut(uid, component);
+                    break;
+                }
         }
     }
 
@@ -438,7 +439,7 @@ public sealed partial class FleshCultistSystem : EntitySystem
             if (TryComp<AppearanceComponent>(args.Args.Target, out var appComponent))
             {
                 _sharedAppearance.SetData(args.Args.Target.Value, DamageVisualizerKeys.Disabled, true, appComponent);
-                _damageableSystem.TryChangeDamage(args.Args.Target.Value, new DamageSpecifier(){DamageDict = {{"Slash", 100}}});
+                _damageableSystem.TryChangeDamage(args.Args.Target.Value, new DamageSpecifier() { DamageDict = { { "Slash", 100 } } });
             }
 
             hasAppearance = true;
@@ -536,7 +537,7 @@ public sealed partial class FleshCultistSystem : EntitySystem
         var abommob = Spawn(component.FleshMutationMobId, coordinates);
         if (TryComp<MindContainerComponent>(uid, out var mindComp) && mindComp.HasMind)
             EntityManager.System<MindSystem>().TransferTo(mindComp.Mind!.Value, abommob, true);
-            //mindComp.Mind?.TransferTo(abommob, ghostCheckOverride: true);
+        //mindComp.Mind?.TransferTo(abommob, ghostCheckOverride: true);
 
         _popup.PopupEntity(Loc.GetString("flesh-pudge-transform-user", ("EntityTransform", uid)),
             uid, uid, PopupType.LargeCaution);

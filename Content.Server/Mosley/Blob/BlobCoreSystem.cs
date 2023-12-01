@@ -28,6 +28,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Content.Server.Objectives.Conditions;
+using Robust.Shared.Player;
 
 namespace Content.Server.Mosley.Blob;
 
@@ -80,8 +81,8 @@ public sealed class BlobCoreSystem : EntitySystem
 
     private void OnBlobCaptureInfo(EntityUid uid, BlobCaptureConditionComponent component, ref ObjectiveAfterAssignEvent args)
     {
-        _metaDataSystem.SetEntityName(uid,Loc.GetString("objective-condition-blob-capture-title"));
-        _metaDataSystem.SetEntityDescription(uid,Loc.GetString("objective-condition-blob-capture-description", ("count", component.Target)));
+        _metaDataSystem.SetEntityName(uid, Loc.GetString("objective-condition-blob-capture-title"));
+        _metaDataSystem.SetEntityDescription(uid, Loc.GetString("objective-condition-blob-capture-description", ("count", component.Target)));
     }
 
     private void OnBlobCaptureProgress(EntityUid uid, BlobCaptureConditionComponent component, ref ObjectiveGetProgressEvent args)

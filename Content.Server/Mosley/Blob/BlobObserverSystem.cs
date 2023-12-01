@@ -55,7 +55,7 @@ public sealed class BlobObserverSystem : SharedBlobObserverSystem
     [Dependency] private readonly RoleSystem _roleSystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly ActorSystem _actorSystem = default!;
+    [Dependency] private readonly ISharedPlayerManager _actorSystem = default!;
     [Dependency] private readonly ViewSubscriberSystem _viewSubscriberSystem = default!;
 
 
@@ -67,8 +67,8 @@ public sealed class BlobObserverSystem : SharedBlobObserverSystem
 
         SubscribeLocalEvent<BlobCoreComponent, CreateBlobObserverEvent>(OnCreateBlobObserver);
 
-        SubscribeLocalEvent<BlobObserverComponent, PlayerAttachedEvent>(OnPlayerAttached, before: new []{ typeof(ActionsSystem) });
-        SubscribeLocalEvent<BlobObserverComponent, PlayerDetachedEvent>(OnPlayerDetached, before: new []{ typeof(ActionsSystem) });
+        SubscribeLocalEvent<BlobObserverComponent, PlayerAttachedEvent>(OnPlayerAttached, before: new[] { typeof(ActionsSystem) });
+        SubscribeLocalEvent<BlobObserverComponent, PlayerDetachedEvent>(OnPlayerDetached, before: new[] { typeof(ActionsSystem) });
 
         SubscribeLocalEvent<BlobCoreComponent, BlobCreateFactoryActionEvent>(OnCreateFactory);
         SubscribeLocalEvent<BlobCoreComponent, BlobCreateResourceActionEvent>(OnCreateResource);
@@ -146,20 +146,20 @@ public sealed class BlobObserverSystem : SharedBlobObserverSystem
             isNewMind = true;
         }
 
-        _roleSystem.MindAddRole(mindId, new BlobRoleComponent{ PrototypeId = core.AntagBlobPrototypeId });
+        _roleSystem.MindAddRole(mindId, new BlobRoleComponent { PrototypeId = core.AntagBlobPrototypeId });
         SendBlobBriefing(mindId);
 
         _alerts.ShowAlert(observer, AlertType.BlobHealth, (short) Math.Clamp(Math.Round(core.CoreBlobTotalHealth.Float() / 10f), 0, 20));
 
         var blobRule = EntityQuery<BlobRuleComponent>().FirstOrDefault();
-        blobRule?.Blobs.Add((mindId,mind));
+        blobRule?.Blobs.Add((mindId, mind));
 
         _mindSystem.TryAddObjective(mindId, mind, "BlobCaptureObjective");
 
         _mindSystem.TransferTo(mindId, observer, true, mind: mind);
-        if (_actorSystem.TryGetActorFromUserId(args.UserId, out var session, out _))
+        if (_actorSystem.TryGetSessionById(args.UserId, out var session))
         {
-            _actorSystem.Attach(observer, session, true);
+            _actorSystem.SetAttachedEntity(session, observer, true);
         }
 
         UpdateUi(observer, core);
@@ -200,7 +200,7 @@ public sealed class BlobObserverSystem : SharedBlobObserverSystem
             return;
         }
 
-        _action.GrantActions(uid, new []
+        _action.GrantActions(uid, new[]
         {
             coreComponent.ActionHelpBlob!.Value,
             coreComponent.ActionSwapBlobChem!.Value,
@@ -772,7 +772,7 @@ public sealed class BlobObserverSystem : SharedBlobObserverSystem
             };
             if (mobAdjacentTiles.Any(indices => grid.GetAnchoredEntities(indices).Any(ent => HasComp<BlobTileComponent>(ent))))
             {
-                if (HasComp<DestructibleComponent>(target) && !HasComp<ItemComponent>(target)&& !HasComp<SubFloorHideComponent>(target))
+                if (HasComp<DestructibleComponent>(target) && !HasComp<ItemComponent>(target) && !HasComp<SubFloorHideComponent>(target))
                 {
                     if (_blobCoreSystem.TryUseAbility(uid, observerComponent.Core.Value, blobCoreComponent, blobCoreComponent.AttackCost))
                     {

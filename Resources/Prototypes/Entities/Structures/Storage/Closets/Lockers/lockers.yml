@@ -408,7 +408,6 @@
         destroyAfterUses: 2
         destroyType: DeleteComponent
 
-<<<<<<< HEAD
 #Mosley
 - type: entity
   id: LockerBlueshield
