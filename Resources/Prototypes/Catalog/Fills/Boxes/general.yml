@@ -488,7 +488,10 @@
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeyJuridical
   components:
+  - type: Item
+    size: Normal
   - type: StorageFill
     contents:
       - id: EncryptionKeyJuridical
         amount: 6
+  - type: Storage

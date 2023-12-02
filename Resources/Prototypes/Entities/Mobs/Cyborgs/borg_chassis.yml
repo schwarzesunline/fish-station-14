@@ -244,17 +244,8 @@
     noMindState: securitron_e_r
   - type: Construction
     node: security
-  - type: IntrinsicRadioTransmitter
-    channels:
-    - Security
-    - Binary
-    - Common
-    - Science
   - type: Loadout
     prototypes: [ SecurityBorgGear ]
-  - type: ActiveRadio
-    channels:
-    - Security
   - type: IntrinsicRadioTransmitter
     channels:
     - Service

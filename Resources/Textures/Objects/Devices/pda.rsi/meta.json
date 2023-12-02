@@ -237,7 +237,8 @@
     },
     {
       "name": "pda-bs"
-    }
+    },
+    {
       "name": "equipped-IDCARD",
       "directions": 4
     }
