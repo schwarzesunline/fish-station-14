@@ -19,9 +19,11 @@ public enum CollisionGroup
     MidImpassable      = 1 << 2, // 4 Mobs, players, crabs, etc
     HighImpassable     = 1 << 3, // 8 Things on top of tables and things that block tall/large mobs.
     LowImpassable      = 1 << 4, // 16 For things that can fit under a table or squeeze under an airlock
+    BlobImpassable     = 1 << 5, // 228 Blob Tiles # TODO: HOW FUCK THIS WORKS?
     GhostImpassable    = 1 << 5, // 32 Things impassible by ghosts/observers, ie blessed tiles or forcefields
     BulletImpassable   = 1 << 6, // 64 Can be hit by bullets
     InteractImpassable = 1 << 7, // 128 Blocks interaction/InRangeUnobstructed
+    DoorPassable       = 1 << 8, // 256 Allows door to close over top, Like blast doors over conveyors for disposals rooms/cargo.
 
 
     MapGrid = MapGridHelpers.CollisionGroup, // Map grids, like shuttles. This is the actual grid itself, not the walls or other entities connected to the grid.
