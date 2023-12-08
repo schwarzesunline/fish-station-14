@@ -8,6 +8,7 @@ using Content.Shared.Damage;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Popups;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Server.Mosley.Blob;
 
@@ -51,7 +52,7 @@ public sealed class BlobMobSystem : EntitySystem
         var colored = EnsureComp<BlobSmokeColorComponent>(smokeEnt);
         colored.Color = comp.SmokeColor;
         //colored.SmokeColor = comp.SmokeColor;
-        Dirty(smokeEnt,smoke);
+        Dirty(smokeEnt, smoke);
         var solution = new Solution();
         foreach (var reagent in comp.SmokeReagents)
         {

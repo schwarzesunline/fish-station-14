@@ -1,4 +1,4 @@
-﻿using Content.Server.Atmos.Components;
+using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.Mind;
@@ -12,6 +12,7 @@ using Content.Shared.Mind.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Physics;
 using Content.Shared.Tag;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
 
@@ -100,7 +101,7 @@ public sealed class ZombieBlobSystem : EntitySystem
         else
         {
             var htn = EnsureComp<HTNComponent>(uid);
-            htn.RootTask = new HTNCompoundTask() {Task = "SimpleHostileCompound"};
+            htn.RootTask = new HTNCompoundTask() { Task = "SimpleHostileCompound" };
             htn.Blackboard.SetValue(NPCBlackboard.Owner, uid);
             _npc.WakeNPC(uid, htn);
         }

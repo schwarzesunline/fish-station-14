@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Components;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -24,7 +25,7 @@ public sealed partial class FleshHeartComponent : Component
 
     [DataField("alertLevelOnDeactivate")] public string AlertLevelOnDeactivate = "green";
 
-    public IPlayingAudioStream? AmbientAudioStream = default;
+    public Entity<AudioComponent>? AmbientAudioStream = default;
 
     [DataField("bodyToFinalStage"), ViewVariables(VVAccess.ReadWrite)]
     public int BodyToFinalStage = 3; // default 3

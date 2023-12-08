@@ -100,6 +100,7 @@
   keycode: 'а'
   frequency: 8120
   color: "#cf1b48"
+  longRange: true
 
 - type: radioChannel
   id: Freelance

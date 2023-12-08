@@ -151,7 +151,7 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitMedic
     shoes: ClothingShoesBootsMagSyndie
-    id: SyndiPDA
+    id: SyndiAgentPDA
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbingMedFilled
@@ -305,7 +305,6 @@
     - WeaponMeleeToolboxRobust
 
 #Brigmedic
-
 - type: startingGear
   id: BrigmedicGear
   equipment:
@@ -355,3 +354,11 @@
     id: TrackerSecBorg
     back: JetpackSecBorgVoidFilled
     shoes: ClothingShoesBootsMagSecBorg
+
+#Banana Clown
+- type: startingGear
+  id: BananaClown
+  equipment:
+    shoes: ClothingShoesClownBanana
+    jumpsuit: ClothingUniformJumpsuitClownBanana
+    mask: ClothingMaskClownBanana

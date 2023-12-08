@@ -54,6 +54,7 @@
     - Juridical
     - Flesh
     - Freelance
+    receiveAllChannels: true
     globalReceive: true
   - type: Physics
     bodyType: KinematicController

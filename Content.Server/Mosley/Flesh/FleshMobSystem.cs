@@ -1,9 +1,10 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Content.Server.Popups;
 using Content.Shared.Mosley.Flesh;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs;
 using Content.Shared.Popups;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 
 namespace Content.Server.Mosley.Flesh
@@ -61,12 +62,11 @@ namespace Content.Server.Mosley.Flesh
 
             for (int i = 0; i < component.DeathMobSpawnCount; i++)
             {
-                var offsetX = (float)(random.NextDouble() * spawnDistance * 2 - spawnDistance);
-                var offsetY = (float)(random.NextDouble() * spawnDistance * 2 - spawnDistance);
+                var offsetX = (float) (random.NextDouble() * spawnDistance * 2 - spawnDistance);
+                var offsetY = (float) (random.NextDouble() * spawnDistance * 2 - spawnDistance);
                 var coords = new EntityCoordinates(uid, new Vector2(offsetX, offsetY));
                 Spawn(component.DeathMobSpawnId, coords);
             }
         }
     }
 }
-

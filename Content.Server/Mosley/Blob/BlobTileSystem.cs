@@ -4,14 +4,13 @@ using Content.Server.Construction.Components;
 using Content.Server.Destructible;
 using Content.Server.Emp;
 using Content.Server.Flash;
-using Content.Server.Flash.Components;
 using Content.Shared.Mosley.Blob;
 using Content.Shared.Damage;
 using Content.Shared.Destructible;
 using Content.Shared.FixedPoint;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
-using Robust.Server.GameObjects;
+using Robust.Server.Audio;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
@@ -105,35 +104,35 @@ public sealed class BlobTileSystem : SharedBlobTileSystem
             switch (tile.BlobTileType)
             {
                 case BlobTileType.Normal:
-                {
-                    returnCost = core.NormalBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.NormalBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
                 case BlobTileType.Strong:
-                {
-                    returnCost = core.StrongBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.StrongBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
                 case BlobTileType.Factory:
-                {
-                    returnCost = core.FactoryBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.FactoryBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
                 case BlobTileType.Resource:
-                {
-                    returnCost = core.ResourceBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.ResourceBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
                 case BlobTileType.Reflective:
-                {
-                    returnCost = core.ReflectiveBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.ReflectiveBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
                 case BlobTileType.Node:
-                {
-                    returnCost = core.NodeBlobCost * core.ReturnResourceOnRemove;
-                    break;
-                }
+                    {
+                        returnCost = core.NodeBlobCost * core.ReturnResourceOnRemove;
+                        break;
+                    }
             }
         }
 

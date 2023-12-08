@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Numerics;
 using Content.Server.AlertLevel;
 using Content.Server.Body.Systems;
@@ -26,6 +26,7 @@ using Content.Shared.Random.Helpers;
 using Content.Shared.Tag;
 using Robust.Server.Containers;
 using Robust.Shared.Audio;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Physics;
@@ -78,12 +79,12 @@ namespace Content.Server.Mosley.Flesh
 
         private void OnShutdown(EntityUid uid, FleshHeartComponent component, ComponentShutdown args)
         {
-            component.AmbientAudioStream?.Stop();
+            _audioSystem.Stop(component.AmbientAudioStream, component.AmbientAudioStream);
         }
 
         private void OnDestruction(EntityUid uid, FleshHeartComponent component, DestructionEventArgs args)
         {
-            component.AmbientAudioStream?.Stop();
+            _audioSystem.Stop(component.AmbientAudioStream, component.AmbientAudioStream);
             var stationUid = _stationSystem.GetOwningStation(uid);
             if (stationUid != null)
             {
@@ -137,75 +138,75 @@ namespace Content.Server.Mosley.Flesh
                 switch (comp.State)
                 {
                     case HeartStates.Base:
-                    {
-                        comp.Accumulator += frameTime;
-
-                        if (comp.Accumulator <= 1)
-                            continue;
-                        comp.Accumulator -= 1;
-                        if (comp.BodyContainer.ContainedEntities.Count >= comp.BodyToFinalStage)
                         {
-                            comp.State = HeartStates.Active;
-                            var location = Transform(ent).MapPosition;
+                            comp.Accumulator += frameTime;
 
-                            _chat.DispatchGlobalAnnouncement(
-                                Loc.GetString("flesh-heart-activate-warning", ("location", location.Position)),
-                                playSound: false, colorOverride: Color.Red);
-                            // _audioSystem.PlayGlobal("/Audio/Misc/notice1.ogg", Filter.Broadcast(), true);
-                            var stationUid = _stationSystem.GetOwningStation(ent);
-                            if (stationUid != null)
+                            if (comp.Accumulator <= 1)
+                                continue;
+                            comp.Accumulator -= 1;
+                            if (comp.BodyContainer.ContainedEntities.Count >= comp.BodyToFinalStage)
                             {
-                                _alertLevel.SetLevel(stationUid.Value, comp.AlertLevelOnActivate, false,
-                                    false, true, true);
+                                comp.State = HeartStates.Active;
+                                var location = Transform(ent).MapPosition;
+
+                                _chat.DispatchGlobalAnnouncement(
+                                    Loc.GetString("flesh-heart-activate-warning", ("location", location.Position)),
+                                    playSound: false, colorOverride: Color.Red);
+                                // _audioSystem.PlayGlobal("/Audio/Misc/notice1.ogg", Filter.Broadcast(), true);
+                                var stationUid = _stationSystem.GetOwningStation(ent);
+                                if (stationUid != null)
+                                {
+                                    _alertLevel.SetLevel(stationUid.Value, comp.AlertLevelOnActivate, false,
+                                        false, true, true);
+                                }
+
+                                _audioSystem.PlayGlobal(
+                                    "/Audio/Announcements/flesh_heart_activate.ogg", Filter.Broadcast(), true,
+                                    AudioParams.Default);
+                                SpawnFleshFloorOnOpenTiles(comp, Transform(ent), 1);
+                                _roundEndSystem.CancelRoundEndCountdown(stationUid);
+                                _audioSystem.PlayPvs(comp.TransformSound, ent, comp.TransformSound.Params);
+                                comp.AmbientAudioStream = _audioSystem.PlayGlobal(
+                                    "/Audio/Ambience/Objects/flesh_heart.ogg", Filter.Broadcast(), true,
+                                    AudioParams.Default.WithLoop(true).WithVolume(-3f));
+                                _appearance.SetData(ent, FleshHeartVisuals.State, FleshHeartStatus.Active);
                             }
 
-                            _audioSystem.PlayGlobal(
-                                "/Audio/Announcements/flesh_heart_activate.ogg", Filter.Broadcast(), true,
-                                AudioParams.Default);
-                            SpawnFleshFloorOnOpenTiles(comp, Transform(ent), 1);
-                            _roundEndSystem.CancelRoundEndCountdown(stationUid);
-                            _audioSystem.PlayPvs(comp.TransformSound, ent, comp.TransformSound.Params);
-                            comp.AmbientAudioStream = _audioSystem.PlayGlobal(
-                                "/Audio/Ambience/Objects/flesh_heart.ogg", Filter.Broadcast(), true,
-                                AudioParams.Default.WithLoop(true).WithVolume(-3f));
-                            _appearance.SetData(ent, FleshHeartVisuals.State, FleshHeartStatus.Active);
+                            break;
                         }
-
-                        break;
-                    }
                     case HeartStates.Active:
-                    {
-                        comp.SpawnMobsAccumulator += frameTime;
-                        comp.SpawnObjectsAccumulator += frameTime;
-                        comp.FinalStageAccumulator += frameTime;
-                        var xform = Transform(ent);
-                        if (comp.SpawnMobsAccumulator >= comp.SpawnMobsFrequency)
                         {
-                            comp.SpawnMobsAccumulator = 0;
-                            SpawnMonstersOnOpenTiles(comp, xform, comp.SpawnMobsAmount, comp.SpawnMobsRadius);
-                        }
-
-                        if (comp.SpawnObjectsAccumulator >= comp.SpawnObjectsFrequency)
-                        {
-                            comp.SpawnObjectsAccumulator = 0;
-                            // SpawnObjectsOnOpenTiles(comp, xform, comp.SpawnObjectsAmount, comp.SpawnObjectsRadius);
-                        }
-
-                        if (comp.FinalStageAccumulator >= comp.TimeLiveFinalHeartToWin)
-                        {
-                            comp.State = HeartStates.Disable;
-                            RaiseLocalEvent(new FleshHeartFinalEvent()
+                            comp.SpawnMobsAccumulator += frameTime;
+                            comp.SpawnObjectsAccumulator += frameTime;
+                            comp.FinalStageAccumulator += frameTime;
+                            var xform = Transform(ent);
+                            if (comp.SpawnMobsAccumulator >= comp.SpawnMobsFrequency)
                             {
-                                OwningStation = xform.GridUid,
-                            });
-                        }
+                                comp.SpawnMobsAccumulator = 0;
+                                SpawnMonstersOnOpenTiles(comp, xform, comp.SpawnMobsAmount, comp.SpawnMobsRadius);
+                            }
 
-                        break;
-                    }
+                            if (comp.SpawnObjectsAccumulator >= comp.SpawnObjectsFrequency)
+                            {
+                                comp.SpawnObjectsAccumulator = 0;
+                                // SpawnObjectsOnOpenTiles(comp, xform, comp.SpawnObjectsAmount, comp.SpawnObjectsRadius);
+                            }
+
+                            if (comp.FinalStageAccumulator >= comp.TimeLiveFinalHeartToWin)
+                            {
+                                comp.State = HeartStates.Disable;
+                                RaiseLocalEvent(new FleshHeartFinalEvent()
+                                {
+                                    OwningStation = xform.GridUid,
+                                });
+                            }
+
+                            break;
+                        }
                     case HeartStates.Disable:
-                    {
-                        break;
-                    }
+                        {
+                            break;
+                        }
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
