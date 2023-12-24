@@ -1,0 +1,20 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatInteque
+  name: бронированная куртка-пальто Inteque
+  description: Стильная тёмно-коричневая куртка-пальто с дополнительной бронёй.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/inteque_armcoat.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/inteque_armcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
+        Caustic: 0.75 
+  - type: ExplosionResistance
+    damageCoefficient: 0.90

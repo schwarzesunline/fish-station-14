@@ -1,0 +1,23 @@
+- type: entity
+  parent: BasePDA
+  id: PathologistPDA
+  name: КПК Патологоанатом
+  description: Пахнет миазмами...
+  components:
+  - type: Pda
+    id: PathologistIDCard
+    state: pda-patologoanatom
+  - type: Icon
+    state: pda-patologoanatom
+
+- type: entity
+  parent: IDCardStandard
+  id: PathologistIDCard
+  name: ID Карта патологоанатом
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idpatologoanatom
+  - type: PresetIdCard
+    job: MedicalPathologist
