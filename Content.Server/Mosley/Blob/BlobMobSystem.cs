@@ -25,7 +25,7 @@ public sealed class BlobMobSystem : EntitySystem
 
         SubscribeLocalEvent<BlobMobComponent, BlobMobGetPulseEvent>(OnPulsed);
         SubscribeLocalEvent<BlobMobComponent, AttackAttemptEvent>(OnBlobAttackAttempt);
-        SubscribeLocalEvent<SmokeOnTriggerComponent, TriggerEvent>(HandleSmokeTrigger);
+        SubscribeLocalEvent<SmokeOnTriggerComponentFluidComponent, TriggerEvent>(HandleSmokeTrigger);
     }
 
     private void OnPulsed(EntityUid uid, BlobMobComponent component, BlobMobGetPulseEvent args)
@@ -44,7 +44,7 @@ public sealed class BlobMobSystem : EntitySystem
     }
 
 
-    private void HandleSmokeTrigger(EntityUid uid, SmokeOnTriggerComponent comp, TriggerEvent args)
+    private void HandleSmokeTrigger(EntityUid uid, SmokeOnTriggerComponentFluidComponent comp, TriggerEvent args)
     {
         var xform = Transform(uid);
         var smokeEnt = Spawn("Smoke", xform.Coordinates);

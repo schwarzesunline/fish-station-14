@@ -220,19 +220,21 @@ public sealed class BlobCoreSystem : EntitySystem
 
                     ChangeBlobEntChem(blobFactoryComponent.Blobbernaut.Value, oldChem, newChem);
                 }
-
-                foreach (var compBlobPod in blobFactoryComponent.BlobPods)
-                {
-                    if (TryComp<SmokeOnTriggerComponent>(compBlobPod, out var smokeOnTriggerComponent))
-                    {
-                        smokeOnTriggerComponent.SmokeColor = component.ChemСolors[newChem];
-                    }
-                }
+                /*
+                                foreach (var compBlobPod in blobFactoryComponent.BlobPods)
+                                {
+                                    if (TryComp<SmokeOnTriggerComponent>(compBlobPod, out var smokeOnTriggerComponent))
+                                    {
+                                        smokeOnTriggerComponent.SmokeColor = component.ChemСolors[newChem];
+                                    }
+                                }
+                                */
             }
 
             ChangeBlobEntChem(blobTile, oldChem, newChem);
         }
     }
+
 
     private void OnDestruction(EntityUid uid, BlobCoreComponent component, DestructionEventArgs args)
     {

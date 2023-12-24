@@ -87,7 +87,7 @@ public sealed class BlobFactorySystem : EntitySystem
         component.BlobPods.Add(pod);
         var blobPod = EnsureComp<BlobPodComponent>(pod);
         blobPod.Core = blobTileComponent.Core.Value;
-        var smokeOnTrigger = EnsureComp<SmokeOnTriggerComponent>(pod);
+        var smokeOnTrigger = EnsureComp<SmokeOnTriggerComponentFluidComponent>(pod);
         smokeOnTrigger.SmokeColor = blobCoreComponent.ChemСolors[blobCoreComponent.CurrentChem];
         component.SpawnedCount += 1;
         component.NextSpawn = _gameTiming.CurTime + TimeSpan.FromSeconds(component.SpawnRate);
