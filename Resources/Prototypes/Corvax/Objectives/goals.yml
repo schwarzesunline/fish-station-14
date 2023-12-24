@@ -41,3 +41,11 @@
 - type: stationGoal
   id: StationZalupaFive
   text: station-goal-five
+
+- type: stationGoal
+  id: StationGoalMiningOutpost
+  text: station-goal-mining-outpost
+
+- type: stationGoal
+  id: StationGoalContaintment
+  text: station-goal-containment

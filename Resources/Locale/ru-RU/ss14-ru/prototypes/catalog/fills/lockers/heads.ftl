@@ -43,4 +43,6 @@ ent-LockerNanotrasenRepresentiveFilled = { ent-LockerNanotrasenRepresentive }
 ent-LockerMagistratFilled = { ent-LockerMagistrat }
     .suffix = Заполненный
     .desc = { ent-LockerMagistrat.desc }
-
+ent-LockerFreezerVaultFilled = { ent-LockerFreezerBase }
+    .suffix = Хранилище, Закрыт
+    .desc = { ent-LockerFreezerBase.desc }
