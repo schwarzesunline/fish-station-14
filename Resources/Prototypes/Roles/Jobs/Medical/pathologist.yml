@@ -1,6 +1,6 @@
 - type: job
   id: MedicalPathologist
-  name: Патологоанатом
+  name: патологоанатом
   description: Врач, которые относит трупы в морг и занимается прижизненной и посмертной диагностикой трупа. 
   playTimeTracker: JobMedicalPathologist
   requirements:
