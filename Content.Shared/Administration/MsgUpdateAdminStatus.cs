@@ -55,7 +55,9 @@ namespace Content.Shared.Administration
             buffer.Write(Admin.Active);
             buffer.WritePadBits();
             buffer.Write((uint) Admin.Flags);
+#pragma warning disable CS8604 // Possible null reference argument.
             buffer.Write(Admin.Title);
+#pragma warning restore CS8604 // Possible null reference argument.
         }
 
         public override NetDeliveryMethod DeliveryMethod => NetDeliveryMethod.ReliableOrdered;
