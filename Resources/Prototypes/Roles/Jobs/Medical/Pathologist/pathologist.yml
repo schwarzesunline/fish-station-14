@@ -1,0 +1,37 @@
+- type: job
+  id: MedicalPathologist
+  name: Патологоанатом
+  description: Врач, которые относит трупы в морг и занимается прижизненной и посмертной диагностикой трупа. 
+  playTimeTracker: JobMedicalPathologist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 36000 #10 hrs # Corvax-RoleTime
+  startingGear: PathologistGear
+  icon: "JobIconPathologist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  
+- type: startingGear
+  id: PathologistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorBlack
+    outerClothing: ClothingOuterCoatPatologoanatom
+    id: PathologistPDA
+    ears: ClothingHeadsetPatologoanatom
+    head: ClothingHeadHatPatologonatHat
+    belt: ClothingBeltMedicalFilled
+  innerClothingSkirt: ClothingUniformJumpskirtMedicalDoctor
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconPathologist
+  icon:
+    sprite: Jobs/Medical/Pathologist/JobIcon/pathologist_icon.rsi
+    state: pathologist_ico
