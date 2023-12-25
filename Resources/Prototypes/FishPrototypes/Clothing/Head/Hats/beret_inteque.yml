@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretInteque
+  name: берет Inteque
+  description: Тёмно-коричневый берет с эмблемой организации Inteque.
+  components:
+  - type: Sprite
+    sprite: FishTextures/Clothing/Head/Hats/beret_inteque.rsi
+  - type: Clothing
+    sprite: FishTextures/Clothing/Head/Hats/beret_inteque.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - HamsterWearable
+    - WhitelistChameleon

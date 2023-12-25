@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatPatologoanatom
+  name: Халат патологоанатома
+  description: Стерильный чёрный халат патологоанатома для работы с трупами. Немного защищает от проливов кислот.
+  components:
+  - type: Sprite
+    sprite: Jobs/Medical/Pathologist/Clothing/patolocoat.rsi
+  - type: Clothing
+    sprite: Jobs/Medical/Pathologist/Clothing/patolocoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitIntequeOps
+  name: комбинезон оперативника Inteque
+  description: Тёмно-коричневый комбинезон, используемый оперативниками Inteque.
+  components:
+  - type: Sprite
+    sprite: FishTextures/Clothing/Uniforms/Jumpsuit/intequeops.rsi
+  - type: Clothing
+    sprite: FishTextures/Clothing/Uniforms/Jumpsuit/intequeops.rsi

@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakShcloack
+  name: плащ Синего Щита
+  description: Его серебрянные полосы и щит в середине даёт понять,что вы имеете дело с живым щитом.
+  components:
+  - type: Sprite
+    sprite: FishTextures/Clothing/Neck/Cloaks/Shloack.rsi

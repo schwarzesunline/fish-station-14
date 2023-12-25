@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakScientistCloack
+  name: плащ учёного
+  description: Он не даёт вам защиты от радиации и кислоты,за то подчеркивает кто вы на самом деле.
+  components:
+  - type: Sprite
+    sprite: FishTextures/Clothing/Neck/Cloaks/scientistcloack.rsi
