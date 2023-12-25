@@ -71,7 +71,6 @@
   description: department-Medical-description
   color: "#52B4E9"
   roles:
-  - MedicalPathologist
   - Chemist
   - ChiefMedicalOfficer
   - MedicalDoctor

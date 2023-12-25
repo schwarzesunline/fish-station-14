@@ -1,8 +1,0 @@
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckCloakMimecloack
-  name: мимский плащ
-  description: Этот плащ такой же молчаливый как и его владелец.
-  components:
-  - type: Sprite
-    sprite: Clothing/Neck/Cloaks/mimecloack.rsi

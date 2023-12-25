@@ -1,8 +1,0 @@
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckCloakClownloack
-  name: плащ клоуна
-  description: Клоунский плащ пропитанный шутками над СБ и верой в Хонко Мать
-  components:
-  - type: Sprite
-    sprite: Clothing/Neck/Cloaks/clowncloack.rsi
