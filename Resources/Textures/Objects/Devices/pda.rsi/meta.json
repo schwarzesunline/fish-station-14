@@ -8,6 +8,9 @@
   },
   "states": [
     {
+      "name": "pda-patologoanatom"
+    },
+    {
       "name": "id_overlay"
     },
     {
@@ -21,9 +24,6 @@
     {
       "name": "inhand-right",
       "directions": 4
-    },
-    {
-      "name": "pda-patologoanatom"
     },
     {
       "name": "insert_overlay"
@@ -53,6 +53,9 @@
       "name": "pda-ce"
     },
     {
+      "name": "pda-ntr"
+    },
+    {
       "name": "pda-chaplain"
     },
     {
@@ -72,6 +75,15 @@
     },
     {
       "name": "pda-detective"
+    },
+    {
+      "name": "pda-investigator"
+    },
+    {
+      "name": "pda-iaa"
+    },
+    {
+      "name": "pda-magistrat"
     },
     {
       "name": "pda-engineer"
@@ -116,6 +128,9 @@
     },
     {
       "name": "pda-miner"
+    },
+    {
+      "name": "pda-pirate"
     },
     {
       "name": "pda-qm"
@@ -165,6 +180,9 @@
       "name": "pda-syndi"
     },
     {
+      "name": "pda-syndi-agent"
+    },
+    {
       "name": "pda-centcom",
       "delays": [
         [
@@ -208,7 +226,7 @@
     {
       "name": "pda-ert"
     },
-	{
+    {
       "name": "pda-cluwne"
     },
     {

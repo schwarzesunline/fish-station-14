@@ -8,10 +8,10 @@
   },
   "states": [
     {
-      "name": "default"
+      "name": "idpatologoanatom"
     },
     {
-      "name": "idpatologoanatom"
+      "name": "default"
     },
     {
       "name": "centcom"
@@ -66,6 +66,15 @@
     },
     {
       "name": "idcentcom"
+    },
+    {
+      "name": "idmagistrat"
+    },
+    {
+      "name": "idntr"
+    },
+    {
+      "name": "idinvestigator"
     },
     {
       "name": "idchaplain"
@@ -159,15 +168,6 @@
     },
     {
       "name": "idwarden"
-    },
-    {
-      "name": "idmagistrat"
-    },
-    {
-      "name": "idinvestigator"
-    },
-    {
-      "name": "idntr"
     },
     {
       "name": "idmusician"
