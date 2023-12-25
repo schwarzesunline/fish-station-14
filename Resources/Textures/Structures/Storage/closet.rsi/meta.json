@@ -8,6 +8,15 @@
   "license": "CC-BY-SA-3.0",
   "states": [
     {
+      "name": "patologoanatom"
+    },
+    {
+      "name": "patologoanatom_door"
+    },
+    {
+      "name": "patologoanatom_open"
+    },
+    {
       "name": "abductor"
     },
     {
