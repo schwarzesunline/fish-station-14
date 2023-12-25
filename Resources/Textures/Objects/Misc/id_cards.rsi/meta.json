@@ -11,6 +11,9 @@
       "name": "default"
     },
     {
+      "name": "idpatologoanatom"
+    },
+    {
       "name": "centcom"
     },
     {
@@ -63,15 +66,6 @@
     },
     {
       "name": "idcentcom"
-    },
-    {
-      "name": "idmagistrat"
-    },
-    {
-      "name": "idntr"
-    },
-    {
-      "name": "idinvestigator"
     },
     {
       "name": "idchaplain"
@@ -165,6 +159,15 @@
     },
     {
       "name": "idwarden"
+    },
+    {
+      "name": "idmagistrat"
+    },
+    {
+      "name": "idinvestigator"
+    },
+    {
+      "name": "idntr"
     },
     {
       "name": "idmusician"

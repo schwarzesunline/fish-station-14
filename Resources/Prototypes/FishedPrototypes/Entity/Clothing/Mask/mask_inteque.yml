@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasInteque
+  name: тактическая маска Inteque
+  description: Плотно прилегающая к лицу тактическая маска, защищающая лицо от вспышек. Часто используется оперативниками Inteque.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/mask_inteque.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/mask_inteque.rsi
+  - type: FlashImmunity
+  - type: EyeProtection

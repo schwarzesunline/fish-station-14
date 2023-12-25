@@ -8,6 +8,15 @@
   "license": "CC-BY-SA-3.0",
   "states": [
     {
+      "name": "patologoanatom"
+    },
+    {
+      "name": "patologoanatom_open"
+    },
+    {
+      "name": "patologoanatom_door"
+    },
+    {
       "name": "abductor"
     },
     {
@@ -116,15 +125,6 @@
       "name": "bomb_open"
     },
     {
-      "name": "janitor_bomb"
-    },
-    {
-      "name": "janitor_bomb_door"
-    },
-    {
-      "name": "janitor_bomb_open"
-    },
-    {
       "name": "cabinet"
     },
     {
@@ -132,24 +132,6 @@
     },
     {
       "name": "cabinet_open"
-    },
-    {
-      "name": "mag"
-    },
-    {
-      "name": "mag_door"
-    },
-    {
-      "name": "mag_open"
-    },
-    {
-      "name": "ntr"
-    },
-    {
-      "name": "ntr_door"
-    },
-    {
-      "name": "ntr_open"
     },
     {
       "name": "cap"
@@ -345,13 +327,13 @@
       "name": "generic"
     },
     {
+      "name": "generic_icon"
+    },
+    {
       "name": "generic_door"
     },
     {
       "name": "generic_open"
-    },
-    {
-      "name": "generic_icon"
     },
     {
       "name": "green_door"
