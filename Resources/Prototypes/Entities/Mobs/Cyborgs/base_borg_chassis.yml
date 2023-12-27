@@ -225,3 +225,4 @@
   - type: ActivatableUIRequiresLock
   - type: AccessReader
     access: [["Command"], ["Research"]]
+  - type: ShowSecurityIcons

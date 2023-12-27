@@ -24,3 +24,7 @@ roles-antag-flesh-cultist-name = Культист плоти
 roles-antag-flesh-cultist-objective = Оставайтесь в тени, готовя гибель станции.
 roles-antag-flesh-cultist-leader-name = Лидер культа плоти
 roles-antag-flesh-cultist-leader-objective = Воплощайте цели культа в реальность. Обеспечьте выживание всех членов культа.
+roles-antag-thief-name = Вор
+roles-antag-thief-objective = Пополните свою личную коллекцию имуществом Nanotrasen, не прибегая к насилию.
+roles-antag-terminator-name = Экстерминатор
+roles-antag-terminator-objective = Убейте цель любой ценой, от этого зависит будущее.

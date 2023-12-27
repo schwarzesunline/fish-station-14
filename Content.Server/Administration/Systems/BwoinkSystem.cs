@@ -74,7 +74,7 @@ namespace Content.Server.Administration.Systems
             _config.OnValueChanged(CCVars.DiscordAHelpAvatar, OnAvatarChanged, true);
             _config.OnValueChanged(CVars.GameHostName, OnServerNameChanged, true);
             _sawmill = IoCManager.Resolve<ILogManager>().GetSawmill("AHELP");
-            _maxAdditionalChars = GenerateAHelpMessage("", "", true).Length;
+            _maxAdditionalChars = GenerateAHelpMessage("", "", true, _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss"), _gameTicker.RunLevel).Length;
             _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
 
             SubscribeLocalEvent<GameRunLevelChangedEvent>(OnGameRunLevelChanged);
@@ -469,7 +469,7 @@ namespace Content.Server.Administration.Systems
                 {
                     str = str[..(DescriptionMax - _maxAdditionalChars - unameLength)];
                 }
-                _messageQueues[msg.UserId].Enqueue(GenerateAHelpMessage(senderSession.Name, str, !personalChannel, admins.Count == 0));
+                _messageQueues[msg.UserId].Enqueue(GenerateAHelpMessage(senderSession.Name, str, !personalChannel, _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss"), _gameTicker.RunLevel, admins.Count == 0));
             }
 
             if (admins.Count != 0 || sendsWebhook)
@@ -490,10 +490,10 @@ namespace Content.Server.Administration.Systems
                .ToList();
         }
 
-        private static string GenerateAHelpMessage(string username, string message, bool admin, bool noReceivers = false)
+        private static string GenerateAHelpMessage(string username, string message, bool admin, string roundTime, GameRunLevel roundState, bool noReceivers = false)
         {
             var stringbuilder = new StringBuilder();
-
+            
             if (admin)
                 stringbuilder.Append(":outbox_tray:");
             else if (noReceivers)
@@ -501,6 +501,8 @@ namespace Content.Server.Administration.Systems
             else
                 stringbuilder.Append(":inbox_tray:");
 
+            if(roundTime != string.Empty && roundState == GameRunLevel.InRound)
+                stringbuilder.Append($" **{roundTime}**");
             stringbuilder.Append($" **{username}:** ");
             stringbuilder.Append(message);
             return stringbuilder.ToString();

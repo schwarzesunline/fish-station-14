@@ -34,3 +34,5 @@ id-card-access-level-syndicate-agent = Агент синдиката
 id-card-access-level-nanotrasenrepresentive = Представитель NanoTrasen
 id-card-access-level-magistrat = Магистрат
 id-card-access-level-investigator = Следователь
+id-card-access-level-syndicate-agent = Агент Синдиката
+id-card-access-level-central-command = Центральное командование
